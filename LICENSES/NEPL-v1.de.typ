@@ -1,0 +1,185 @@
+// NEPLv1 — de. 생성물: tools/render.py 가 NEPL-v1.de.md 에서 만든다. 손으로 고치지 않는다.
+#set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm))
+#set text(font: ("Noto Sans", "DejaVu Sans"), lang: "de", size: 10pt)
+#set par(justify: false, leading: 0.68em)
+#set heading(numbering: none)
+#show heading.where(level: 1): set text(size: 15pt)
+#show heading.where(level: 2): set text(size: 11.5pt)
+
+= NEWSNIPER Ethische Öffentliche Lizenz, Version 1 (NEPLv1)
+
+Entwurf — noch nicht eingefroren; der Wortlaut kann sich ändern.
+
+#strong[Maßgeblich ist der koreanische Text.] Dieser deutsche Text ist eine Übersetzung zur Erleichterung des Verständnisses (Ziffer 10.1).
+
+Dieses Dokument ist eine #strong[Vorlage, die unverändert auf jedes Repository angewendet werden kann.] Alles, was von Repository zu Repository verschieden ist — Rechteinhaber, vorbestehendes Werk, gesondert lizenzierte Teile, anwendbares Recht — steht nicht im Text selbst, sondern im #strong[Anwendungshinweis] nach Ziffer 12.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 0. Über diese Lizenz — unverbindlicher Hinweis
+
+Diese Lizenz ist #strong[keine „Open-Source"-Lizenz im Sinne der Open Source Initiative und keine „freie Software" im Sinne der Free Software Foundation.] Ziffer 5 beschränkt Einsatzgebiete (vgl. OSD Nr. 6; FSF-Freiheit 0). Diese Beschränkung ist gewollt und wird nicht zurückgenommen. Diese Lizenz ist auch #strong[keine Creative-Commons-Lizenz] und keine Abwandlung einer solchen, sondern ein eigenständiges Dokument; sie verwendet die Namen und Zeichen von CC, MIT oder BSD nicht.
+
+Diese Ziffer 0 dient allein der Auslegung und begründet keine Rechte oder Pflichten.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 1. Begriffsbestimmungen
+
+1.1 #strong[„Das Werk"] bezeichnet alles, was das Repository oder die Verbreitung enthält, dem bzw. der diese Lizenz beigefügt ist — Dokumente, Entwürfe, Drehbücher, Diagramme, Daten, Software und deren Bearbeitungen — mit Ausnahme der #strong[gesondert lizenzierten Teile] (Ziffer 1.6).
+
+1.2 #strong[„Software-Teil"] bezeichnet diejenigen Bestandteile des Werkes, die von Maschinen ausgeführt oder verarbeitet werden: Quellcode, Objektcode, Build-Skripte, Konfigurationsdateien und dergleichen.
+
+1.3 #strong[„Text-Teil"] bezeichnet diejenigen Bestandteile des Werkes, die kein Software-Teil sind: Prosa, Konzepte, Drehbücher, Übersetzungen, Diagramme, Bilder, Anmerkungen und dergleichen.
+
+1.4 #strong[„Vorbestehendes Werk"] bezeichnet ein früheres Werk, dessen Bearbeitung, Übersetzung oder Umgestaltung das Werk darstellt, #strong[soweit es im Anwendungshinweis aufgeführt ist.] Führt der Anwendungshinweis keines auf, so hat das Werk kein vorbestehendes Werk, und #strong[die Ziffern 4 und 6 finden keine Anwendung.]
+
+1.5 #strong[„Rechteinhaber des vorbestehenden Werks"] bezeichnet dessen Urheber persönlich sowie jede Person oder Einrichtung, die die Verwertungsrechte daran oder eine entsprechende Lizenzierungsbefugnis rechtmäßig innehat (einschließlich Verlagen und Rechtsnachfolgern).
+
+1.6 #strong[„Gesondert lizenzierter Teil"] bezeichnet jeden Teil des Werkes, der einen eigenen Lizenzhinweis trägt oder im Anwendungshinweis als solcher bezeichnet ist. Diese Lizenz hat darauf keine Wirkung; bei Widersprüchen geht die eigene Lizenz jenes Teils vor.
+
+1.7 #strong[„Lizenzgeber"] bezeichnet die Inhaber des Urheberrechts am Werk, die es unter dieser Lizenz anbieten, #strong[wie im Anwendungshinweis benannt], nebst weiteren Mitwirkenden.
+
+1.8 #strong[„Sie"] bezeichnet die natürliche oder juristische Person, die Rechte aus dieser Lizenz ausübt.
+
+1.9 #strong[„Nicht kommerziell"] bedeutet: nicht vorrangig auf geschäftlichen Vorteil oder geldwerte Vergütung gerichtet. Die Erstattung tatsächlicher Kosten (Vervielfältigung, Versand, Hosting), die übliche Tätigkeit einer gemeinnützigen Einrichtung sowie das Teilen aus einem privaten, werbefreien Repository sind nicht kommerziell. Entgeltlicher Vertrieb, die Einbindung in einen werbe- oder abonnementfinanzierten Dienst sowie Merchandising sind kommerziell. In Zweifelsfällen können Sie den Lizenzgeber fragen.
+
+1.10 #strong[„Verbotene Nutzung"] hat die in Ziffer 5 bestimmte Bedeutung.
+
+1.11 #strong[„Anwendungshinweis"] bezeichnet den dem Werk nach Ziffer 12 beigefügten Hinweis.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 2. Rechteeinräumung
+
+Vorbehaltlich der Bedingungen in Ziffer 3 und der Beschränkung in Ziffer 5 räumt der Lizenzgeber Ihnen ein #strong[weltweites, unentgeltliches, nicht ausschließliches, zeitlich unbeschränktes] Recht ein:
+
+2.1 #strong[Hinsichtlich des Software-Teils] — ihn zu nutzen, zu vervielfältigen, zu bearbeiten, zusammenzuführen, zu veröffentlichen, zu verbreiten und produktiv einzusetzen, in Quell- oder Objektform, mit oder ohne Änderungen, #strong[einschließlich zu kommerziellen Zwecken.]
+
+2.2 #strong[Hinsichtlich des Text-Teils] — ihn zu vervielfältigen, zu verbreiten, öffentlich zugänglich zu machen, vorzuführen und zu übersetzen sowie Bearbeitungen davon zu erstellen, #strong[jedoch nur zu nicht kommerziellen Zwecken] und vorbehaltlich der Weitergabebedingung in Ziffer 3.3. #emph[(Gestattet der Anwendungshinweis auch für den Text-Teil die kommerzielle Nutzung, so gilt dies.)]
+
+2.3 Diese Einräumung reicht nur so weit, wie der Lizenzgeber Rechte zu vergeben hat. Siehe Ziffer 6.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 3. Bedingungen
+
+3.1 #strong[Namensnennung.] Bei Verbreitung oder Veröffentlichung des Werkes oder einer Bearbeitung nennen Sie in einer dem Medium angemessenen Weise: den im Anwendungshinweis genannten Urheber, den Namen dieser Lizenz und ihre Fundstelle sowie, falls Sie Änderungen vorgenommen haben, den Umstand der Änderung. Form und Platzierung des Hinweises dürfen dem Medium angepasst werden.
+
+3.2 #strong[Erhalt der Hinweise.] Sie fügen der Verbreitung eine Kopie dieser Lizenz, den Anwendungshinweis sowie die Urheberrechtshinweise bei. Wird ein Software-Teil nur in Objektform verbreitet, genügt die Aufnahme in die Dokumentation, in einen Informationsbildschirm oder in eine beigefügte Datei.
+
+3.3 #strong[Weitergabe unter gleichen Bedingungen — nur Text-Teil.] Bearbeiten Sie einen Text-Teil oder erstellen Sie daraus eine Bearbeitung und verbreiten Sie das Ergebnis, so verbreiten Sie dieses Ergebnis als Ganzes unter dieser Lizenz oder einer späteren Version davon. Für den Software-Teil gilt diese Bedingung nicht.
+
+3.4 #strong[Kein Anschein einer Billigung.] Sie stellen das Werk nicht als offizielles Material eines vorbestehenden Werks oder als von dessen Rechteinhaber genehmigt, gebilligt oder gefördert dar. Sie verwenden Namen oder Zeichen des Lizenzgebers nicht ohne Erlaubnis zur Bewerbung des Werkes.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 4. Sonderregelung für Rechteinhaber des vorbestehenden Werks
+
+#emph[(Gilt nur, wenn ein vorbestehendes Werk vorhanden ist — Ziffer 1.4.)]
+
+4.1 Sind Sie #strong[Rechteinhaber des vorbestehenden Werks], so gelten Ziffer 3.1 (Namensnennung), Ziffer 3.3 (Weitergabe unter gleichen Bedingungen) und die #strong[Beschränkung auf nicht kommerzielle Zwecke] in Ziffer 2.2 für Sie nicht. Der Lizenzgeber räumt jedem solchen Rechteinhaber gesondert eine #strong[zusätzliche Erlaubnis] ein, das gesamte Werk in das vorbestehende Werk und dessen Bearbeitungen aufzunehmen, zu bearbeiten und zu verwerten, #strong[ohne Pflicht zur Namensnennung und einschließlich kommerzieller Verwertung.]
+
+4.2 Gleichwohl #strong[wird die Namensnennung empfohlen.] Der Lizenzgeber wird aus dem Unterbleiben der Namensnennung keine Ansprüche herleiten und verpflichtet sich, Urheberpersönlichkeitsrechte insoweit nicht auszuüben (in Rechtsordnungen, in denen ein Verzicht auf Urheberpersönlichkeitsrechte unzulässig ist — etwa nach § 13 UrhG (DE), § 19 UrhG (AT), Art. 9 URG (CH) — ist dieser Satz als schuldrechtliche Nichtausübungsvereinbarung zu lesen).
+
+4.3 Diese Sonderregelung #strong[geht Ziffer 5 nicht vor.] Auch einem solchen Rechteinhaber sind Verbotene Nutzungen nicht gestattet.
+
+4.4 Diese Sonderregelung setzt nicht voraus, dass der Rechteinhaber die übrigen Bestimmungen dieser Lizenz annimmt. Er kann sich allein auf die zusätzliche Erlaubnis nach Ziffer 4.1 berufen.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 5. Verbotene Nutzungen — vom Umfang der Rechteeinräumung ausgenommen
+
+5.1 Keine durch diese Lizenz eingeräumte Befugnis #strong[erstreckt sich] auf die folgenden Nutzungen. Dies ist kein Versprechen Ihrerseits, sondern eine #strong[Beschränkung des Umfangs der Rechteeinräumung selbst]; eine solche Nutzung ist daher von vornherein nicht lizenziert und stellt eine Urheberrechtsverletzung dar.
+
+(a) #strong[Verbrechen gegen die Menschlichkeit] — das Begehen, der Versuch, das Anordnen, Anstiften, Auffordern, Beihilfeleisten zu einer in Artikel 7 des Römischen Statuts des Internationalen Strafgerichtshofs beschriebenen Handlung oder die Nutzung des Werkes, um eine solche Handlung vorzubereiten, zu steuern, zu verschleiern oder zu rechtfertigen.
+
+(b) #strong[Kriegsverbrechen] — wie unter (a), bezogen auf Handlungen nach Artikel 8 desselben Statuts. Völkermord (Artikel 6) und das Verbrechen der Aggression (Artikel 8 bis) sind ebenfalls erfasst.
+
+(c) #strong[Straftaten gegen Kinder] — Straftaten, deren Opfer eine Person unter 18 Jahren ist, insbesondere sexuelle Ausbeutung und sexueller Missbrauch von Kindern, Herstellung, Besitz oder Verbreitung von Darstellungen sexuellen Kindesmissbrauchs, Kinderhandel, Kinderzwangsarbeit sowie der Einsatz von Kindern in bewaffneten Konflikten (unter Bezugnahme auf das UN-Übereinkommen über die Rechte des Kindes nebst Fakultativprotokollen sowie auf das Recht des Nutzungsortes).
+
+5.2 Bestimmt das Recht des Nutzungsortes eine der Kategorien (a) bis (c) weiter, so gilt jenes Recht. Ob ein Verhalten dem Wortlaut der genannten Instrumente unterfällt, wird unabhängig davon beurteilt, ob es tatsächlich vor einem internationalen Gericht verfolgt worden ist.
+
+5.3 Diese Beschränkung gilt #strong[dauerhaft] und wird weder durch Ziffer 4 noch durch die Heilungsregel in Ziffer 8 noch durch den Anwendungshinweis noch durch eine sonstige Bestimmung gelockert.
+
+5.4 Die Nutzung zu wissenschaftlicher Forschung, Berichterstattung, Menschenrechtsdokumentation, Bildung, Strafverfolgung oder zur Dokumentation, Aufdeckung, Verhütung oder Ahndung der vorgenannten Verbrechen ist #strong[keine] Verbotene Nutzung.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 6. Vorbehalt der Rechte am vorbestehenden Werk
+
+#emph[(Gilt nur, wenn ein vorbestehendes Werk vorhanden ist — Ziffer 1.4.)]
+
+6.1 Das Werk ist eine #strong[inoffizielle Bearbeitung] des vorbestehenden Werks. Alle Rechte daran verbleiben bei dessen Rechteinhabern.
+
+6.2 Diese Lizenz räumt Rechte #strong[nur am eigenen schöpferischen Beitrag des Lizenzgebers] ein. Sie räumt keine Rechte an Elementen ein, die aus dem vorbestehenden Werk stammen; der Lizenzgeber ist auch nicht in der Lage, solche Rechte einzuräumen.
+
+6.3 Sie sind dafür verantwortlich, vor der Nutzung des Werkes selbst diejenigen Erlaubnisse einzuholen, die das Recht des Nutzungsortes in Bezug auf das vorbestehende Werk verlangt.
+
+6.4 Verlangt ein Rechteinhaber des vorbestehenden Werks die Entfernung oder Nichtveröffentlichung des Werkes ganz oder teilweise, so darf der Lizenzgeber dem nachkommen; dies stellt keinen Verstoß gegen diese Lizenz dar. Ihre Rechte an bereits verbreiteten Vervielfältigungsstücken erlöschen dadurch nicht rückwirkend.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 7. Gewährleistungsausschluss; Haftungsbeschränkung
+
+7.1 Das Werk wird #strong[„wie besehen"] zur Verfügung gestellt, ohne jede ausdrückliche oder stillschweigende Gewährleistung, einschließlich der Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter.
+
+7.2 Soweit gesetzlich zulässig, haftet der Lizenzgeber nicht für Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung des Werkes entstehen.
+
+7.3 #strong[Jedoch] gelten die Ziffern 7.1 und 7.2 nicht für Schäden aus #strong[Vorsatz oder grober Fahrlässigkeit] des Lizenzgebers, für die Verletzung des Lebens, des Körpers oder der Gesundheit sowie für Schäden, deren Ausschluss das anwendbare Recht verbietet; bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) haftet der Lizenzgeber der Höhe nach begrenzt auf den vertragstypischen, vorhersehbaren Schaden. Diese Ziffer ist, soweit erforderlich, geltungserhaltend an die zwingenden Vorschriften der jeweiligen Rechtsordnung anzupassen (etwa §§ 305 ff. BGB und § 309 Nr. 7 BGB (DE); § 6 KSchG und § 879 ABGB (AT); Art. 100 und 101 OR (CH); das koreanische Gesetz zur Regelung von Allgemeinen Geschäftsbedingungen; Unfair Contract Terms Act 1977 und Consumer Rights Act 2015 (UK)).
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 8. Verstoß und Beendigung
+
+8.1 Verstoßen Sie gegen eine Bedingung der Ziffer 3, so #strong[enden Ihre Rechte] aus dieser Lizenz #strong[automatisch.]
+
+8.2 Fällt der Verstoß nicht unter Ziffer 5 und beheben Sie ihn innerhalb von #strong[30 Tagen], nachdem Sie von ihm Kenntnis erlangt haben oder auf ihn hingewiesen worden sind, so gelten Ihre Rechte als #strong[nie beendet] — es sei denn, der Lizenzgeber hat sie ausdrücklich und endgültig beendet.
+
+8.3 #strong[Die Heilung nach Ziffer 8.2 gilt nicht für einen Verstoß gegen Ziffer 5,] da eine solche Nutzung außerhalb des Umfangs der Rechteeinräumung liegt und insoweit nie Rechte aus dieser Lizenz bestanden haben.
+
+8.4 Die Rechte Dritter, die von Ihnen rechtmäßig Vervielfältigungsstücke erhalten haben, bleiben von der Beendigung Ihrer Rechte unberührt.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 9. Anwendbares Recht und salvatorische Klausel
+
+9.1 Diese Lizenz unterliegt dem #strong[im Anwendungshinweis bestimmten Recht], hilfsweise dem #strong[Recht der Republik Korea.] Sind Sie Verbraucher, so werden die zwingenden Schutzvorschriften des Rechts Ihres gewöhnlichen Aufenthalts durch diese Ziffer nicht verdrängt.
+
+9.2 Ist eine Bestimmung in einer Rechtsordnung unwirksam oder undurchsetzbar, so bleiben die übrigen Bestimmungen davon unberührt. Eine unwirksame Bestimmung ist #strong[auf den größten wirksamen Umfang zurückzuführen, der ihrem Zweck am nächsten kommt.]
+
+9.3 Erklärt zwingendes Recht einer Rechtsordnung eine Einsatzgebietsbeschränkung wie Ziffer 5 für unwirksam, so besteht diese Beschränkung gleichwohl als #strong[schuldrechtliche Verpflichtung] fort, soweit sie wirksam ist.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 10. Versionen und Übersetzungen
+
+10.1 #strong[Maßgeblich ist der koreanische Text.] Der englische, japanische und deutsche Text sind Übersetzungen zur Erleichterung des Verständnisses; bei Abweichungen geht der koreanische Text vor.
+
+10.2 Der Lizenzgeber kann spätere Versionen dieser Lizenz veröffentlichen. Trägt der Anwendungshinweis den Vermerk „NEPLv1 oder jede spätere Version", so können Sie jede Version wählen. Fehlt eine Versionsangabe, gilt Version 1.
+
+10.3 Dieses Lizenzdokument selbst #strong[darf wortgetreu vervielfältigt und verbreitet werden, und jede Person darf es auf ihr eigenes Werk anwenden.] Es steht Ihnen frei, geänderte Fassungen zu erstellen; in diesem Fall #strong[dürfen Sie den Namen „NEWSNIPER Ethical Public License" und die Abkürzung „NEPL" nicht verwenden.]
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 11. Geist — unverbindlicher Nachsatz
+
+Drei Dinge werden von jedem erbeten, der diese Lizenz verwendet. #strong[Gib nicht als dein eigenes aus, was jemand anderes geschaffen hat. Benutze es nicht, um Menschen zu schaden. Und wenn du auf etwas stehst, vergiss nicht, dass es da ist.]
+
+Diese Ziffer begründet keine Rechte oder Pflichten.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+== 12. Anwendungshinweis — wie Sie diese Lizenz auf Ihr eigenes Werk anwenden
+
+Legen Sie im Wurzelverzeichnis des Repositorys eine Datei `LICENSE` (oder `NOTICE`) an und füllen Sie das folgende Formular aus. Nicht ausgefüllte Punkte gelten als „keine".
+
+#block(width: 100%, fill: luma(245), inset: 8pt, radius: 2pt, raw("NEWSNIPER Ethical Public License v1 — Anwendungshinweis\n\nWerk:                 <Name / Repository>\nLizenzgeber:          <Name oder Organisation> <Kontakt (optional)>\nUrheberrecht:         Copyright (c) <Jahr> <Name>\nVersion:              NEPLv1            (oder „NEPLv1 oder jede spätere Version\")\nVolltext der Lizenz:  LICENSES/NEPL-v1.ko.md  (Übersetzungen en / ja / de beigefügt)\n\nVorbestehendes Werk:  <falls vorhanden: Titel, Urheber, Rechteinhaber; sonst „keines\" — Ziffern 4 und 6 finden keine Anwendung>\nGesondert lizenzierte Teile:\n                      <Pfad> — <Lizenz> (<Rechteinhaber>)\n                      ...\nKommerzielle Nutzung des Text-Teils:  nicht gestattet (Standard)  |  gestattet (Lockerung der Ziffer 2.2)\nAnwendbares Recht:    <Staat>   (Standard: Republik Korea)"))
+
+Der Anwendungshinweis gilt als Teil dieser Lizenz; #strong[eine Angabe darin, die Ziffer 5 lockern würde, ist unwirksam.]
+
+12.1 #strong[Die einzige ausdrückliche, bedingungslose Gestattung dieser Lizenz.] Diese Lizenz #strong[trifft keinerlei Bestimmung darüber, in welchem Dokumentformat] sie und der Anwendungshinweis abgefasst oder beigefügt werden. Reiner Text, Markdown, HTML, PDF, reStructuredText, AsciiDoc, Typst, LaTeX, ODF, Bilder, Audio, Braille — alles ist zulässig; Dateinamen und Endungen sind frei; mehrere Formate dürfen nebeneinander beigefügt werden. Es genügt, dass ein Mensch sie mit gewöhnlichen Mitteln lesen kann und dass #strong[der Wortlaut unverändert] ist. Diese Gestattung erfolgt bedingungslos; keine andere Ziffer schränkt sie ein.
+
+#line(length: 100%, stroke: 0.4pt + gray)
+
+#emph[NEWSNIPER Ethical Public License v1 — Entwurf. Der endgültige Wortlaut bleibt der rechtlichen Prüfung vorbehalten. Dieses Dokument stellt keine Rechtsberatung dar.]

@@ -1,0 +1,23 @@
+# 음원 — 권리 확인 전에는 저장소에 넣지 않는다
+*.m4a
+*.flac
+*.wav
+*.mp3
+
+build/
+*.pdf
+
+web/**/node_modules/
+web/**/dist/
+web/**/.astro/
+web/**/.venv/
+web/**/__pycache__/
+web/**/.pytest_cache/
+web/**/*.egg-info/
+web/pathetique-sync/public/decks/
+web/pathetique-sync/public/audio/
+
+__pycache__/
+.env
+.env.*
+*.bak
