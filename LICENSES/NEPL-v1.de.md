@@ -204,6 +204,8 @@ _(Gilt nur, wenn ein Vorbestehendes Werk besteht — Ziffer 1.4.)_
 
 10.3 Dieses Lizenzdokument selbst **darf wortgetreu vervielfältigt und verbreitet werden, und jedermann darf es auf eigene Werke anwenden.** Sie dürfen geänderte Fassungen erstellen; in diesem Fall **verwenden Sie jedoch nicht den Namen „NEWSNIPER Ethical Public License“ und nicht die Abkürzung „NEPL“.** **Die Übersetzung dieser Lizenz in eine andere Sprache ist jedoch gestattet, und eine solche Übersetzung darf den Namen dieser Lizenz tragen** — eine Übersetzung hat anzugeben, dass sie eine Übersetzung ist und dass der koreanische Text maßgeblich ist.
 
+10.4 **Erweiterungen.** Sind weitere Bestimmungen erforderlich, um den Zweck dieser Lizenz zu verwirklichen, so **darf der Lizenzverwalter (Ziffer 1.12) eine „Erweiterung“ veröffentlichen, die auf diese Lizenz aufgesetzt wird.** Eine Erweiterung ersetzt diese Lizenz nicht und **entfaltet Wirkung nur, wenn sie zusammen mit ihr angewandt wird**; ihr Name darf den Namen dieser Lizenz mit einem Zusatz verbinden, und die Namensbeschränkung in Ziffer 10.3 gilt in diesem Fall nicht. **Erweiterungen sind optional** — eine Erweiterung bindet ein Werk nur, wenn der Anwendungshinweis sie benennt; fehlt eine Benennung, so besteht keine. Und **eine Erweiterung darf nur zweierlei: den Umfang der Rechtseinräumung nach Ziffer 2 verengen und Bedingungen hinzufügen.** Eine Erweiterung darf keine Bestimmung dieser Lizenz streichen oder ihren Schutz schwächen, und **der letzte Satz der Ziffer 10.2 gilt auch für Erweiterungen.**
+
 ---
 
 ## 11. Geist — unverbindliche Nachbemerkung
@@ -226,6 +228,7 @@ Lizenzgeber:       <Name oder Organisation>
 Mitteilungen an:   <Anschrift oder E-Mail>  (wohin eine Mitteilung nach Ziffer 8.2.1 gelangt)
 Urheberrecht:      Copyright (c) <Jahr> <Name>
 Fassung:           NEPLv1
+Erweiterungen:     <keine | z. B. NEPLv1-EP>  (Ziffer 10.4 — keine, sofern nicht benannt)
 Lizenztext:        <Pfad>
 
 Vorbestehendes Werk: <falls vorhanden: Titel, Urheber, Rechtsinhaber; sonst "keines" —

@@ -204,6 +204,8 @@ _(Applies only where there is an Upstream Work — clause 1.4.)_
 
 10.3 This licence document itself **may be copied and distributed verbatim, and may be applied by anyone to their own work.** You may create modified versions, but if You do, **You shall not use the name "NEWSNIPER Ethical Public License" or the abbreviation "NEPL".** However, **translating this licence into another language is permitted and such a translation may bear the name of this licence** — a translation shall state that it is a translation and that the Korean text is authoritative.
 
+10.4 **Extensions.** Where further clauses are needed to carry out the purpose of this licence, **the Licence Steward (clause 1.12) may publish an "Extension" to be applied on top of this licence.** An Extension does not replace this licence and **has effect only where it is applied together with it**; its name may combine the name of this licence with a suffix, and in that case the naming restriction in clause 10.3 does not apply. **Extensions are optional** — an Extension binds a work only where the Application Notice names it, and where none is named there is none. And **an Extension may do only two things: narrow the scope of the grant in clause 2, and add conditions.** An Extension may not delete any provision of this licence or weaken its protections, and **the last sentence of clause 10.2 applies to Extensions as well.**
+
 ---
 
 ## 11. Spirit — non-binding postscript
@@ -226,6 +228,7 @@ Licensor:          <name or organisation>
 Notices to:        <address or e-mail>    (where notice under clause 8.2.1 is to reach)
 Copyright:         Copyright (c) <year> <name>
 Version:           NEPLv1
+Extensions:        <none | e.g. NEPLv1-EP>   (clause 10.4 — none unless named)
 Full licence text: <path>
 
 Upstream Work:     <if any: title, author, rightsholder; otherwise "none" —
