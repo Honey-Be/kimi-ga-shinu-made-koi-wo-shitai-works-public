@@ -1,0 +1,103 @@
+{
+  "generator": "tools/sequence_demo_build.py",
+  "note": "음원 셋을 자르거나 이어붙이지 않는다. 무음 구간의 길이는 이 표의 가안이다.",
+  "tracks": {
+    "dvorak": {
+      "dur": 222.0,
+      "src": "/audio/dvorak-songs-my-mother.m4a",
+      "name_ko": "드보르자크 〈어머니가 가르쳐 주신 노래〉",
+      "name_ja": "ドヴォルザーク〈我が母の教え給いし歌〉"
+    },
+    "brahms5": {
+      "dur": 412.21,
+      "src": "/audio/brahms-requiem-v.flac",
+      "name_ko": "브람스 『독일 레퀴엠』 제5곡",
+      "name_ja": "ブラームス『ドイツ・レクイエム』第五曲"
+    },
+    "tchaikovsky": {
+      "dur": 1109.1,
+      "src": "/audio/pathetique-mvt1.m4a",
+      "name_ko": "차이코프스키 교향곡 6번 1악장",
+      "name_ja": "チャイコフスキー交響曲第6番 第1楽章"
+    }
+  },
+  "movements": [
+    {
+      "kind": "audio",
+      "track": "dvorak",
+      "t0": 0.0,
+      "dur": 222.0,
+      "beats": [
+        "A-1",
+        "A-2",
+        "A-3",
+        "A-4",
+        "A-4′"
+      ]
+    },
+    {
+      "kind": "silence",
+      "track": null,
+      "t0": 222.0,
+      "dur": 201.9,
+      "beats": [
+        "A-5",
+        "A-6",
+        "A-7",
+        "B-1",
+        "B-2",
+        "B-3",
+        "C-1"
+      ],
+      "nominal": true
+    },
+    {
+      "kind": "audio",
+      "track": "brahms5",
+      "t0": 423.9,
+      "dur": 412.21,
+      "beats": [
+        "C-2",
+        "C-3",
+        "C-4",
+        "C-5",
+        "C-6",
+        "C-7",
+        "C-8",
+        "C-9",
+        "C-10"
+      ]
+    },
+    {
+      "kind": "silence",
+      "track": null,
+      "t0": 836.11,
+      "dur": 96.3,
+      "beats": [
+        "C-11",
+        "C-12",
+        "C-13",
+        "C-14",
+        "C-15"
+      ],
+      "nominal": true
+    },
+    {
+      "kind": "audio",
+      "track": "tchaikovsky",
+      "t0": 932.41,
+      "dur": 1109.1,
+      "beats": [
+        "11"
+      ]
+    }
+  ],
+  "total": 2041.51,
+  "sources": {
+    "12ko": "4d5210a4abcd92fb",
+    "12ja": "b3fb5f9ea517ef5c",
+    "11ko": "5cd9456001939a74",
+    "11ja": "8ac5ccb07b26bdf9",
+    "cues": "65b325bf146516f4"
+  }
+}

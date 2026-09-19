@@ -4,7 +4,7 @@ import touyingExporter from "touying-astro";
 
 // 저장소 루트 기준 경로 — 이 앱은 web/pathetique-sync/ 에 있다.
 const REPO = "../..";
-const DEMO = `${REPO}/out/bgm/11_비창_1악장_시퀀스_대본/demo`;
+const DECKS = `${REPO}/out/bgm/_combined`; // tools/sequence_demo_build.py gen 이 만든다
 const FONTS = ["/usr/share/fonts/noto-cjk", "/usr/share/fonts/nanum"];
 
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
       python: ".venv/bin/python", // fork(web/touying-exporter)가 editable 로 설치된 venv
       fontPaths: FONTS,
       decks: ["ko", "ja"].map((lang) => ({
-        input: `${DEMO}/slides_${lang}.typ`,
+        input: `${DECKS}/slides_${lang}.typ`,
         outDir: `public/decks/${lang}`,
         labels: ["sync-beat", "sync-meta"],
       })),

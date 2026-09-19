@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""〈비창〉 동기 재생 데모의 헤드리스 검증 (playwright + chromium).
+"""두 시퀀스 연속 재생 데모의 헤드리스 검증 (playwright + chromium).
 
 `pnpm build` 결과(dist/)를 python 정적 서버(빈 포트)로 띄우고, 시각 몇 개에서
   · 덱이 manifest 가 말하는 페이지를 보여주는지 (img src == page-NNN.svg)
   · 비트 목록의 .active 가 그 비트인지
   · KO/JA 토글 뒤에도 같은 페이지인지
 를 확인한다. Chromium 은 AAC(m4a)를 재생하지 못하므로 <audio> 대신
-window.pathetique.seek(t) 로 시각을 주입한다 (페이지가 노출하는 e2e 용 API).
+window.sequence.seek(t) 로 전역 시각을 주입한다 (페이지가 노출하는 e2e 용 API).
+또한 악장(음원 셋 + 무음 둘)의 경계를 넘을 때 <audio> 의 src 가 바뀌는지도 본다.
 
 시스템 python3 으로 실행한다 (playwright 는 시스템에 설치되어 있다):
-    python3 tools/pathetique_demo_e2e.py [--build] [--port 4321]
+    python3 tools/sequence_demo_e2e.py [--build] [--port 4321]
 """
 
 import argparse
@@ -113,6 +114,7 @@ def main():
 
     man = json.loads((WEB / "public/decks/ko/manifest.json").read_text(encoding="utf8"))
     beats = [x for x in man["labels"]["sync-beat"] if not x.get("sub")]
+    MOV = json.loads((ROOT / "out/bgm/_combined/movements.json").read_text(encoding="utf8"))
     ts = [b["t_sec"] for b in beats]
 
     def expect_page(t):
@@ -123,7 +125,12 @@ def main():
         i = bisect.bisect_right([b["t_sec"] for b in bs], t) - 1
         return bs[max(i, 0)]["section"]
 
-    probes = [0.0, beats[0]["t_sec"], 60.0, 300.0, 577.8, 846.4, 1000.0, 1108.0]
+    # 다섯 악장을 고루 — 드보르자크 · 무음① · 브람스 · 무음② · 차이코프스키
+    probes = [0.0, beats[0]["t_sec"], 100.0]
+    for m in MOV["movements"]:
+        probes += [m["t0"] + 0.5, m["t0"] + m["dur"] / 2]
+    probes.append(MOV["total"] - 2.0)
+    probes = sorted(set(round(t, 1) for t in probes))
 
     url = f"http://127.0.0.1:{args.port}/"
     # dist/ 는 정적 사이트다. `astro preview` 는 Astro 7 에서 단일 인스턴스(이미 떠 있으면 두 번째를 거부)라
@@ -148,11 +155,11 @@ def main():
             )
             for t in probes:
                 exp = expect_page(t)
-                page.evaluate(f"pathetique.seek({t})")
-                st = page.evaluate("pathetique.state()")
+                page.evaluate(f"sequence.seek({t})")
+                st = page.evaluate("sequence.state()")
                 src = page.get_attribute("#deck-ko img", "src") or ""
                 active = page.evaluate(
-                    "[...document.querySelectorAll('#beats li.active:not(.sub)')].map(li => Number(li.dataset.page))"
+                    "[...document.querySelectorAll('#beats li.active')].map(li => Number(li.dataset.page))"
                 )
                 ok = st["page"] == exp and src.endswith(f"page-{exp:03d}.svg") and (
                     active == [exp] if exp != man["first_page"] else active == []
@@ -160,9 +167,53 @@ def main():
                 print(f"t={t:7.1f}s  expect page {exp:2d}  state {st['page']:2d}  img {src.rsplit('/', 1)[-1]:12s}  active {active}  {'OK' if ok else 'FAIL'}")
                 if not ok:
                     failures.append(t)
+            # --- 악장: 다섯 악장의 한가운데로 가면 그 악장이 잡히고, 음원 악장은 <audio> 의 src 가 바뀐다
+            for mi, m in enumerate(MOV["movements"]):
+                t = m["t0"] + m["dur"] / 2
+                page.evaluate(f"sequence.seek({t})")
+                st = page.evaluate("sequence.state()")
+                src = page.evaluate("document.getElementById('audio').getAttribute('src') || ''")
+                want_src = MOV["tracks"][m["track"]]["src"] if m["kind"] == "audio" else None
+                ok = (st["movement"]["kind"] == m["kind"] and st["movement"]["track"] == m["track"]
+                      and abs(st["movement"]["t0"] - m["t0"]) < 0.01
+                      and (src == want_src if want_src else True))
+                name = m["track"] or "무음(가안)"
+                print(f"movement {mi} {name:<12} t={t:7.1f}  kind {st['movement']['kind']:<7} src {src.rsplit('/', 1)[-1]:<28} {'OK' if ok else 'FAIL'}")
+                if not ok:
+                    failures.append(f"mov{mi}")
+            # 무음 악장에서는 <audio> 가 멈춰 있어야 한다
+            sil = next(m for m in MOV["movements"] if m["kind"] != "audio")
+            page.evaluate(f"sequence.seek({sil['t0'] + 1})")
+            page.evaluate("sequence.play()")
+            page.wait_for_timeout(500)
+            st = page.evaluate("sequence.state()")
+            paused = page.evaluate("document.getElementById('audio').paused")
+            moved = st["t"] > sil["t0"] + 1.2
+            page.evaluate("sequence.pause()")
+            ok = paused and moved and st["playing"]
+            print(f"silent clock     t={st['t']:7.1f}  audio paused {paused}  clock moved {moved}  {'OK' if ok else 'FAIL'}")
+            if not ok:
+                failures.append("silent-clock")
+            # 주입한 시각이 <audio> 의 timeupdate 에 덮이지 않는가 (악장 첫머리로 튕기지 않는다)
+            for t in (MOV["movements"][2]["t0"] + 200, MOV["movements"][4]["t0"] + 600):
+                page.evaluate(f"sequence.seek({t})")
+                page.wait_for_timeout(700)
+                got = page.evaluate("sequence.state().t")
+                ok = abs(got - t) < 1.5
+                print(f"seek holds  t={t:7.1f} → {got:7.1f}  {'OK' if ok else 'FAIL'}")
+                if not ok:
+                    failures.append(f"hold{t:.0f}")
+
+            # 전역 스크러버의 최대값 = 총 길이
+            mx = page.evaluate("Number(document.getElementById('scrub').max)")
+            ok = abs(mx - MOV["total"]) < 0.01
+            print(f"scrub max {mx} vs total {MOV['total']}  {'OK' if ok else 'FAIL'}")
+            if not ok:
+                failures.append("scrub")
+
             # KO/JA 토글 — 같은 페이지, JA 덱의 img 도 같은 번호
-            page.evaluate("pathetique.setLang('ja')")
-            st = page.evaluate("pathetique.state()")
+            page.evaluate("sequence.setLang('ja')")
+            st = page.evaluate("sequence.state()")
             src_ja = page.get_attribute("#deck-ja img", "src") or ""
             hidden_ko = page.evaluate("document.getElementById('deck-ko').classList.contains('is-hidden')")
             ok = st["lang"] == "ja" and src_ja.endswith(f"page-{st['page']:03d}.svg") and hidden_ko
@@ -182,20 +233,28 @@ def main():
             mp.on("console", lambda m: errors.append("mobile: " + m.text) if m.type == "error" else None)
             mp.goto(url)
             mp.wait_for_function("window.pathetique && document.getElementById('deck-ko').touying && document.getElementById('deck-ja').touying", timeout=30000)
-            mp.evaluate("pathetique.seek(300)")
-            p0 = mp.evaluate("pathetique.state().page")
-            full = mp.evaluate("(document.querySelector('#beats li.active:not(.sub) .x') || {}).textContent || ''")
-            full_visible = mp.evaluate("(() => { const x = document.querySelector('#beats li.active:not(.sub) .x'); return !!x && getComputedStyle(x).display !== 'none'; })()")
+            mp.evaluate("sequence.seek(300)")
+            p0 = mp.evaluate("sequence.state().page")
+            full = mp.evaluate("(document.querySelector('#beats li.active .x') || {}).textContent || ''")
+            full_visible = mp.evaluate("(() => { const x = document.querySelector('#beats li.active .x'); return !!x && getComputedStyle(x).display !== 'none'; })()")
             mp.click("#next-beat")
-            st1 = mp.evaluate("pathetique.state()")
+            st1 = mp.evaluate("sequence.state()")
             p1 = st1["page"]
             mp.click("#prev-sec")  # ‹‹ 구간 = 앞 구간의 첫 비트(키보드 [ 와 같다)
-            p2 = mp.evaluate("pathetique.state().page")
-            sec_start = next(b["page"] for b in beats if b["section"] == st1["beat"]["section"] - 1)
+            p2 = mp.evaluate("sequence.state().page")
+            # ‹‹ 구간 = 앞 구간(= (seq, section) 묶음)의 첫 비트
+            keys, firsts = [], {}
+            for b in beats:
+                k = (b["seq"], b["section"])
+                if k not in firsts:
+                    firsts[k] = b["page"]
+                    keys.append(k)
+            cur_k = (st1["beat"]["seq"], st1["beat"]["section"])
+            sec_start = firsts[keys[max(keys.index(cur_k) - 1, 0)]]
             deck_before = mp.evaluate("document.getElementById('deck-ko').getBoundingClientRect().toJSON()")
             mp.click("#zoom")
             mp.wait_for_function("document.getElementById('stage').classList.contains('zoomed')")
-            zoomed = mp.evaluate("pathetique.state().zoomed")
+            zoomed = mp.evaluate("sequence.state().zoomed")
             deck_after = mp.evaluate("document.getElementById('deck-ko').getBoundingClientRect().toJSON()")
             vw, vh = mp.evaluate("[window.innerWidth, window.innerHeight]")
             fits = -1 <= deck_after["left"] and deck_after["right"] <= vw + 1 and -1 <= deck_after["top"] and deck_after["bottom"] <= vh + 1
@@ -205,7 +264,7 @@ def main():
             mp.screenshot(path=str(Path(args.shot).with_name("e2e-mobile-zoom.png")))
             mp.click("#unzoom")
             mp.wait_for_function("!document.getElementById('stage').classList.contains('zoomed')")
-            unz = not mp.evaluate("pathetique.state().zoomed")
+            unz = not mp.evaluate("sequence.state().zoomed")
             ovf = no_overflow(mp)
             ok = (len(full) > 44 and full_visible and p1 == p0 + 1 and p2 == sec_start
                   and zoomed and fits and grew and rotated and play_visible and unz and ovf)
@@ -217,7 +276,7 @@ def main():
 
             # --- 모바일: 가로 폰 (844×390) — 덱과 목록이 한 화면에, 넘침 없음
             mp.set_viewport_size({"width": 844, "height": 390})
-            mp.evaluate("pathetique.seek(577.8)")
+            mp.evaluate("sequence.seek(577.8)")
             deck = mp.evaluate("document.getElementById('deck-ko').getBoundingClientRect().toJSON()")
             lst = mp.evaluate("document.getElementById('beats').parentElement.getBoundingClientRect().toJSON()")
             aud = mp.evaluate("document.getElementById('audio').getBoundingClientRect().toJSON()")

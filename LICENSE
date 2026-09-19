@@ -5,7 +5,8 @@ NEWSNIPER Ethical Public License v1 (NEPLv1) — 적용 고지 / Application Not
       이 저장소의 사본도 갱신한다.
       정본: https://github.com/newsniper-org/ethical-public-license
 
-저작물        〈비창〉 1악장 시퀀스 — 대본 · 덱 · 동기 재생 데모 · 인물관계도
+저작물        두 시퀀스(동귀어진 → 폭로방송 · 「비창」 1악장)
+              — 대본 · 덱 · 연속 재생 데모 · 인물관계도
               (비공개 작업 저장소의 공개용 스냅샷)
 라이선서      NEWSNIPER <newsniper@protonmail.com>
 통지처        newsniper@protonmail.com            (제8.2.1조의 통지가 도달할 곳)
@@ -71,7 +72,8 @@ NEWSNIPER Ethical Public License v1 (NEPLv1) — 적용 고지 / Application Not
     동일조건. 구체적으로는 다음이 해당한다.
 
       out/**                        대본(script_*), 큐(cues.json),
-                                    덱(demo/slides_*), demo/README.md
+                                    덱(_combined/slides_*, demo/slides_*),
+                                    악장표(_combined/movements.json), README.md
       docs/_diagrams/**             인물관계도
       README.md
 

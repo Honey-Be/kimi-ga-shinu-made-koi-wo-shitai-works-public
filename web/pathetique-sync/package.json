@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "version": "0.1.0",
-  "description": "〈비창〉 1악장 시퀀스 대본 — touying 덱을 배경음악 재생 위치에 맞춰 강조하는 로컬 데모 (비공개)",
+  "description": "두 시퀀스(동귀어진 → 폭로방송 → 〈비창〉 1악장) 연속 대본 — touying 덱을 배경음악 재생 위치에 맞춰 강조하는 로컬 데모 (비공개). 음원 셋은 자르지도 이어붙이지도 않는다",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
