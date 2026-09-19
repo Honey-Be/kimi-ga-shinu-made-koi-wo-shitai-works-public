@@ -1,32 +1,49 @@
 ==================================================================================================================
-NEWSNIPER Ethische Öffentliche Lizenz, Version 1 (NEPLv1)
+NEWSNIPER Ethische Öffentliche Lizenz, Fassung 1 (NEPLv1)
 ==================================================================================================================
 
-Entwurf — noch nicht eingefroren; der Wortlaut kann sich ändern.
+**NEWSNIPER Ethical Public License v1** · Entwurf, zweite Fassung (vor dem Freeze; der Wortlaut
+kann sich ändern)
 
-\ **Maßgeblich ist der koreanische Text.** Dieser deutsche Text ist eine Übersetzung zur
-Erleichterung des Verständnisses (Ziffer 10.1).
+**Dies ist eine Übersetzung; maßgeblich ist der koreanische Text** (Ziffer 10.1).
 
-Dieses Dokument ist eine **Vorlage, die unverändert auf jedes Repository angewendet werden
-kann.** Alles, was von Repository zu Repository verschieden ist — Rechteinhaber, vorbestehendes
-Werk, gesondert lizenzierte Teile, anwendbares Recht — steht nicht im Text selbst, sondern im
-**Anwendungshinweis** nach Ziffer 12.
+Dieses Dokument ist eine **Vorlage, die unverändert auf jedes Repository angewandt werden
+kann.** Alles, was von Repository zu Repository verschieden ist — Rechtsinhaber, Vorbestehendes
+Werk, gesondert lizenzierte Teile, anwendbares Recht, optionale Bedingungen — steht nicht im
+Text, sondern im **Anwendungshinweis nach Ziffer 12.**
 
 ..
 
 ----
 
-0. Über diese Lizenz — unverbindlicher Hinweis
---------------------------------------------------------------------------------------------
+0. Über diese Lizenz
+----------------------------------------
 
-Diese Lizenz ist **keine „Open-Source"-Lizenz im Sinne der Open Source Initiative und keine
-„freie Software" im Sinne der Free Software Foundation.** Ziffer 5 beschränkt Einsatzgebiete
-(vgl. OSD Nr. 6; FSF-Freiheit 0). Diese Beschränkung ist gewollt und wird nicht zurückgenommen.
-Diese Lizenz ist auch **keine Creative-Commons-Lizenz** und keine Abwandlung einer solchen,
-sondern ein eigenständiges Dokument; sie verwendet die Namen und Zeichen von CC, MIT oder BSD
-nicht.
+0.1 **Unverbindlicher Hinweis.** Diese Lizenz ist **keine „Open Source“-Lizenz im Sinne der Open
+Source Initiative und keine „freie Software“ im Sinne der Free Software Foundation.** Ziffer 5
+beschränkt Einsatzbereiche (vgl. OSD Nr. 6; FSF Freiheit 0). Diese Beschränkung ist gewollt und
+wird nicht zurückgenommen. Diese Lizenz ist ferner **keine Creative-Commons-Lizenz** und keine
+Abwandlung einer solchen, sondern ein **eigenständiges Dokument**\ ; sie verwendet die Namen und
+Marken CC, MIT und BSD nicht. Diese Ziffer dient allein der Auslegung und begründet weder Rechte
+noch Pflichten.
 
-Diese Ziffer 0 dient allein der Auslegung und begründet keine Rechte oder Pflichten.
+0.2 **Rechtsnatur und Annahme.** Diese Lizenz ist eine **einseitige Rechtseinräumung** des
+Lizenzgebers gegenüber der Allgemeinheit. Sie müssen diese Lizenz nicht annehmen, um ein
+Vervielfältigungsstück des Werkes zu erhalten oder zu besitzen. Außerhalb dieser Lizenz wird
+Ihnen jedoch kein Nutzungsrecht am Werk eingeräumt; wenn Sie daher das Werk vervielfältigen,
+verbreiten, bearbeiten oder öffentlich wiedergeben oder sonst etwas tun, was erst die Einräumung
+nach Ziffer 2 rechtmäßig macht, nehmen Sie damit sämtliche Bestimmungen dieser Lizenz an,
+einschließlich der Beschränkung in Ziffer 5 sowie der Ziffern 7 und 9. Solange Sie keine Rechte
+aus dieser Lizenz ausüben, trifft Sie keine Pflicht. Diese Ziffer ändert nichts daran, dass
+Ziffer 5 eine **Beschränkung des Umfangs der Rechtseinräumung** ist (Ziffer 5.1).
+
+0.3 **Patente — keine Einräumung.** **Diese Lizenz räumt keinerlei Patentrechte ein.** Erfordert
+die Nutzung des Werkes eine Patentlizenz, so obliegt es Ihnen, diese selbst zu erwerben. Diese
+Ziffer ist weder ein Versprechen, ein Patent des Lizenzgebers geltend zu machen, noch ein
+Verzicht darauf.
+
+0.4 Der Lizenzgeber fügt jedem Vertriebsstück des Werkes den vollständigen Text dieser Lizenz
+und den Anwendungshinweis bei, damit Sie sie vor der Nutzung lesen können (Ziffer 3.2).
 
 ..
 
@@ -35,70 +52,125 @@ Diese Ziffer 0 dient allein der Auslegung und begründet keine Rechte oder Pflic
 1. Begriffsbestimmungen
 ----------------------------------------------
 
-1.1 **„Das Werk"** bezeichnet alles, was das Repository oder die Verbreitung enthält, dem bzw.
-der diese Lizenz beigefügt ist — Dokumente, Entwürfe, Drehbücher, Diagramme, Daten, Software und
-deren Bearbeitungen — mit Ausnahme der **gesondert lizenzierten Teile** (Ziffer 1.6).
+1.1 **„Das Werk“** bezeichnet alles, was in dem Repository oder Vertriebsstück enthalten ist,
+dem diese Lizenz beigefügt ist — Dokumente, Entwürfe, Drehbücher, Diagramme, Daten, Software und
+deren Ableitungen — mit Ausnahme der **gesondert lizenzierten Teile** (Ziffer 1.6) und
+desjenigen, was der Anwendungshinweis **von der Rechtseinräumung ausnimmt.**
 
-1.2 **„Software-Teil"** bezeichnet diejenigen Bestandteile des Werkes, die von Maschinen
-ausgeführt oder verarbeitet werden: Quellcode, Objektcode, Build-Skripte, Konfigurationsdateien
-und dergleichen.
+1.2 **„Software-Teil“** bezeichnet diejenigen Bestandteile des Werkes, die **als solche zur
+Steuerung des Ablaufs einer Maschine verfasst** sind: Quellcode, Objektcode, Build-Skripte und
+Konfigurationsdateien. Eine Datei, die in einer Satz- oder Auszeichnungssprache verfasst ist, um
+für Menschen lesbaren Text zu tragen, wird nicht allein deshalb zum Software-Teil, weil ein
+Werkzeug sie verarbeitet.
 
-1.3 **„Text-Teil"** bezeichnet diejenigen Bestandteile des Werkes, die kein Software-Teil sind:
-Prosa, Konzepte, Drehbücher, Übersetzungen, Diagramme, Bilder, Anmerkungen und dergleichen.
+1.3 **„Text-Teil“** bezeichnet diejenigen Bestandteile des Werkes, die kein Software-Teil sind:
+Darstellungen, Entwürfe, Drehbücher, Übersetzungen, Diagramme, Bilder, Anmerkungen und
+dergleichen.
 
-1.4 **„Vorbestehendes Werk"** bezeichnet ein früheres Werk, dessen Bearbeitung, Übersetzung oder
-Umgestaltung das Werk darstellt, **soweit es im Anwendungshinweis aufgeführt ist.** Führt der
-Anwendungshinweis keines auf, so hat das Werk kein vorbestehendes Werk, und **die Ziffern 4 und
-6 finden keine Anwendung.**\
+1.3.1 **Die Einordnung erfolgt dateiweise.** Eine Datei, die der Anwendungshinweis nicht als
+Software-Teil bezeichnet, gilt als Text-Teil. Kommentare und Zeichenketten innerhalb einer
+Datei, die Software-Teil ist, sind mit dieser Datei Software-Teil. **Eine Datei, deren
+Einordnung unklar ist, gilt als Text-Teil.** Die Einordnung von Ergebnissen, die durch
+Ausführung eines Software-Teils entstehen, richtet sich nach diesen Ergebnissen selbst; was
+jedoch aus einem Text-Teil als Eingabe erzeugt wurde, ist Text-Teil.
 
-1.5 **„Rechteinhaber des vorbestehenden Werks"** bezeichnet dessen Urheber persönlich sowie jede
-Person oder Einrichtung, die die Verwertungsrechte daran oder eine entsprechende
-Lizenzierungsbefugnis rechtmäßig innehat (einschließlich Verlagen und Rechtsnachfolgern).
+1.4 **„Vorbestehendes Werk“** bezeichnet ein vorbestehendes Werk, zu dem dieses Werk eine
+Bearbeitung, Ableitung, Übersetzung oder Umgestaltung darstellt, **soweit es im
+Anwendungshinweis aufgeführt ist.** Führt der Anwendungshinweis keines auf, so besteht kein
+Vorbestehendes Werk und **die Ziffern 4 und 6 finden keine Anwendung.**
 
-1.6 **„Gesondert lizenzierter Teil"** bezeichnet jeden Teil des Werkes, der einen eigenen
-Lizenzhinweis trägt oder im Anwendungshinweis als solcher bezeichnet ist. Diese Lizenz hat
-darauf keine Wirkung; bei Widersprüchen geht die eigene Lizenz jenes Teils vor.
+1.5 **„Rechtsinhaber des Vorbestehenden Werkes“** bezeichnet den Urheber des Vorbestehenden
+Werkes persönlich sowie jede Person oder Stelle, die die Verwertungsrechte daran oder eine
+entsprechende Befugnis zur Rechtseinräumung rechtmäßig innehat (einschließlich Verlagen und
+Rechtsnachfolgern).
 
-1.7 **„Lizenzgeber"** bezeichnet die Inhaber des Urheberrechts am Werk, die es unter dieser
-Lizenz anbieten, **wie im Anwendungshinweis benannt**\ , nebst weiteren Mitwirkenden.
+1.6 **„Gesondert lizenzierter Teil“** bezeichnet jeden Bestandteil des Werkes, der einen eigenen
+Lizenzhinweis trägt oder im Anwendungshinweis als solcher bezeichnet ist. Diese Lizenz hat auf
+einen solchen Teil keinerlei Wirkung; bei Widersprüchen geht dessen eigene Lizenz vor.
 
-1.8 **„Sie"** bezeichnet die natürliche oder juristische Person, die Rechte aus dieser Lizenz
+1.7 **„Lizenzgeber“** bezeichnet die Inhaber des Urheberrechts am Werk, die es unter dieser
+Lizenz anbieten, nämlich die **im Anwendungshinweis benannten** sowie diejenigen, die **nach
+Ziffer 3.5 beigetragen haben.**
+
+1.8 **„Sie“** bezeichnet die natürliche oder juristische Person, die Rechte aus dieser Lizenz
 ausübt.
 
-1.9 **„Nicht kommerziell"** bedeutet: nicht vorrangig auf geschäftlichen Vorteil oder geldwerte
-Vergütung gerichtet. Die Erstattung tatsächlicher Kosten (Vervielfältigung, Versand, Hosting),
-die übliche Tätigkeit einer gemeinnützigen Einrichtung sowie das Teilen aus einem privaten,
-werbefreien Repository sind nicht kommerziell. Entgeltlicher Vertrieb, die Einbindung in einen
-werbe- oder abonnementfinanzierten Dienst sowie Merchandising sind kommerziell. In
-Zweifelsfällen können Sie den Lizenzgeber fragen.
+1.9 **„Nicht-kommerziell“** bedeutet, nicht vorrangig auf geschäftlichen Vorteil oder geldwerte
+Gegenleistung gerichtet zu sein.
 
-1.10 **„Verbotene Nutzung"** hat die in Ziffer 5 bestimmte Bedeutung.
+(a) Die Erstattung tatsächlicher Kosten (Vervielfältigung, Versand, Hosting), die übliche
+Tätigkeit einer gemeinnützigen Einrichtung und das Teilen aus einem persönlichen Repository ohne
+Werbung sind nicht-kommerziell.
 
-1.11 **„Anwendungshinweis"** bezeichnet den dem Werk nach Ziffer 12 beigefügten Hinweis.
+(b) Entgeltlicher Vertrieb, die Einbindung in einen werbe- oder abonnementfinanzierten Dienst
+und Merchandising sind kommerziell.
+
+(c) **Maschinelles Lernen.** Die Verwendung des Werkes zum Training, zur Feinabstimmung oder zur
+abrufgestützten Anreicherung eines Modells des maschinellen Lernens ist nur dann
+nicht-kommerziell, **wenn sowohl dieses Modell als auch jeder es nutzende Dienst
+nicht-kommerziell bereitgestellt werden.** Die Bereitstellung als Trainingsdaten für ein Modell,
+das in einem entgeltlichen oder werbe- bzw. abonnementfinanzierten Produkt oder Dienst
+eingesetzt wird, ist kommerziell; ebenso die entgeltliche Bereitstellung der Modellgewichte.
+
+(d) In Zweifelsfällen können Sie den Lizenzgeber schriftlich befragen. **Die Antwort des
+Lizenzgebers ist eine unverbindliche Auskunft und bindet die Auslegung dieser Ziffer nicht**\ ;
+sie begründet auch kein ausschließliches Auslegungsrecht des Lizenzgebers. Schweigen des
+Lizenzgebers gilt weder als Zustimmung noch als Ablehnung.
+
+1.10 **„Verbotene Nutzung“** hat die in Ziffer 5 bestimmte Bedeutung.
+
+1.11 **„Anwendungshinweis“** bezeichnet den dem Werk nach Ziffer 12 beigefügten Hinweis.
+
+1.12 **„Lizenzverwalter“** bezeichnet denjenigen, der dieses Lizenzdokument herausgibt und
+fortschreibt, nämlich den Erstveröffentlicher dieser Lizenz und jeden von ihm schriftlich
+bestimmten Nachfolger. Der Lizenzverwalter ist vom Lizenzgeber eines einzelnen Werkes (Ziffer
+1.7) zu unterscheiden und kann durch einen Anwendungshinweis nicht geändert werden.
 
 ..
 
 ----
 
-2. Rechteeinräumung
---------------------------------------
+2. Einräumung von Rechten
+--------------------------------------------------
 
 Vorbehaltlich der Bedingungen in Ziffer 3 und der Beschränkung in Ziffer 5 räumt der Lizenzgeber
-Ihnen ein **weltweites, unentgeltliches, nicht ausschließliches, zeitlich unbeschränktes** Recht
-ein:
+Ihnen ein **weltweites, unentgeltliches, nicht ausschließliches, zeitlich unbeschränktes und
+unwiderrufliches** Recht wie folgt ein. Der Lizenzgeber widerruft diese Einräumung nicht nach
+Belieben; stellt er den Vertrieb des Werkes ein oder schaltet er das Repository auf
+nicht-öffentlich, so berührt dies die Rechte derjenigen nicht, die das Werk zuvor rechtmäßig
+unter dieser Lizenz erlangt haben. Die Einräumung endet nur nach Maßgabe der Ziffer 8.
 
-2.1 **Hinsichtlich des Software-Teils** — ihn zu nutzen, zu vervielfältigen, zu bearbeiten,
-zusammenzuführen, zu veröffentlichen, zu verbreiten und produktiv einzusetzen, in Quell- oder
-Objektform, mit oder ohne Änderungen, **einschließlich zu kommerziellen Zwecken.**\
+2.1 **Hinsichtlich des Software-Teils** — Nutzung, Vervielfältigung, Bearbeitung,
+Zusammenführung, **öffentliche Wiedergabe (einschließlich öffentlicher Zugänglichmachung)**\ ,
+Verbreitung, Vermietung und produktiver Einsatz, in Quell- oder Objektform, mit oder ohne
+Änderungen, **einschließlich zu kommerziellen Zwecken.**
 
-2.2 **Hinsichtlich des Text-Teils** — ihn zu vervielfältigen, zu verbreiten, öffentlich
-zugänglich zu machen, vorzuführen und zu übersetzen sowie Bearbeitungen davon zu erstellen,
-**jedoch nur zu nicht kommerziellen Zwecken** und vorbehaltlich der Weitergabebedingung in
-Ziffer 3.3. *(Gestattet der Anwendungshinweis auch für den Text-Teil die kommerzielle Nutzung,
-so gilt dies.)*\
+2.2 **Hinsichtlich des Text-Teils** — Vervielfältigung, Verbreitung, Vermietung, **öffentliche
+Wiedergabe (einschließlich öffentlicher Zugänglichmachung, Sendung und digitaler
+Tonübertragung)**\ , Ausstellung, öffentliche Aufführung und Übersetzung sowie die Herstellung
+von Bearbeitungen und deren Nutzung. Dies gilt **nur für nicht-kommerzielle Zwecke.** *(Erlaubt
+der Anwendungshinweis die kommerzielle Nutzung des Text-Teils, so gilt dies. Bestimmt der
+Anwendungshinweis die Weitergabe unter gleichen Bedingungen, so gilt Ziffer 3.3.)*
 
-2.3 Diese Einräumung reicht nur so weit, wie der Lizenzgeber Rechte zu vergeben hat. Siehe
+2.3 Diese Einräumung reicht nur so weit, wie der Lizenzgeber Rechte einzuräumen hat. Siehe
 Ziffer 6.
+
+2.4 Die in dieser Ziffer genannten Nutzungshandlungen sind **Beispiele**\ ; die Einräumung
+erstreckt sich auf sämtliche dem Lizenzgeber zustehenden Verwertungsrechte. Benennt das Recht
+des Nutzungsortes ein entsprechendes Recht anders, so erstreckt sich die Einräumung auch darauf.
+
+2.5 **Gegenleistung und nachgelagerte Empfänger.** Die Erfüllung der Bedingungen in Ziffer 3
+durch Sie stellt eine Gegenleistung (consideration) für diese Einräumung dar. Selbst wenn diese
+Einräumung nach einem eine Gegenleistung fordernden Recht mangels einer solchen als nicht
+bindend angesehen würde, behält die Einräumung nach Ziffer 2 als urheberrechtliche
+Nutzungsrechtseinräumung ihre Wirkung, so dass eine Nutzung in ihrem Umfang keine Verletzung
+darstellt. Jedes Mal, wenn Sie das Werk oder eine Ableitung davon verbreiten, wird der Empfänger
+nach Ziffer 1.8 selbst zu „Sie“ und erhält die Lizenz **unmittelbar vom Lizenzgeber** — diese
+Lizenz leitet sich nicht von Ihrer ab und bleibt unberührt, wenn Ihre Rechte nach Ziffer 8
+enden. Sie dürfen Empfängern keine Beschränkungen auferlegen, die diese Lizenz nicht vorsieht.
+
+2.6 **Keine Bestimmung dieser Ziffer ist als Einräumung von Patentrechten auszulegen** (Ziffer
+0.3).
 
 ..
 
@@ -107,117 +179,207 @@ Ziffer 6.
 3. Bedingungen
 ----------------------------
 
-3.1 **Namensnennung.** Bei Verbreitung oder Veröffentlichung des Werkes oder einer Bearbeitung
-nennen Sie in einer dem Medium angemessenen Weise: den im Anwendungshinweis genannten Urheber,
-den Namen dieser Lizenz und ihre Fundstelle sowie, falls Sie Änderungen vorgenommen haben, den
-Umstand der Änderung. Form und Platzierung des Hinweises dürfen dem Medium angepasst werden.
+3.1 **Namensnennung.** Bei Verbreitung oder Veröffentlichung des Werkes oder einer Ableitung
+davon nennen Sie in einer dem Medium angemessenen Weise: den im Anwendungshinweis benannten
+Urheber, den Namen dieser Lizenz und die Stelle, an der sie erhältlich ist, sowie, falls Sie
+Änderungen vorgenommen haben, dass Änderungen vorgenommen wurden. Form und Platzierung des
+Hinweises dürfen dem Medium angepasst werden.
 
-3.2 **Erhalt der Hinweise.** Sie fügen der Verbreitung eine Kopie dieser Lizenz, den
-Anwendungshinweis sowie die Urheberrechtshinweise bei. Wird ein Software-Teil nur in Objektform
-verbreitet, genügt die Aufnahme in die Dokumentation, in einen Informationsbildschirm oder in
+3.2 **Erhalt von Hinweisen.** Sie fügen dem Vertriebsstück ein Exemplar dieser Lizenz, den
+Anwendungshinweis und die Urheberrechtsvermerke bei. Wird ein Software-Teil nur in Objektform
+verbreitet, so genügt die Aufnahme in die Dokumentation, in einen Informationsbildschirm oder in
 eine beigefügte Datei.
 
-3.3 **Weitergabe unter gleichen Bedingungen — nur Text-Teil.** Bearbeiten Sie einen Text-Teil
-oder erstellen Sie daraus eine Bearbeitung und verbreiten Sie das Ergebnis, so verbreiten Sie
-dieses Ergebnis als Ganzes unter dieser Lizenz oder einer späteren Version davon. Für den
-Software-Teil gilt diese Bedingung nicht.
+3.3 **Weitergabe unter gleichen Bedingungen — optionale Bedingung.** **Diese Bedingung gilt nur,
+wenn der Anwendungshinweis „Gleiche Bedingungen: gilt“ bestimmt.** In diesem Fall verbreiten
+Sie, wenn Sie einen Text-Teil bearbeiten oder daraus eine Bearbeitung herstellen und das
+Ergebnis verbreiten, **diese Bearbeitung** unter derselben Lizenz. Sie gilt nicht für: den
+Software-Teil; einen gesondert lizenzierten Teil (Ziffer 1.6); sowie eine bloße Zusammenstellung
+selbständiger Werke, die kein einheitliches Werk bildet (dann gilt sie nur für den Teil, der
+dieses Werk ist). **Schweigt der Anwendungshinweis, so gilt diese Bedingung nicht.**
 
-3.4 **Kein Anschein einer Billigung.** Sie stellen das Werk nicht als offizielles Material eines
-vorbestehenden Werks oder als von dessen Rechteinhaber genehmigt, gebilligt oder gefördert dar.
-Sie verwenden Namen oder Zeichen des Lizenzgebers nicht ohne Erlaubnis zur Bewerbung des Werkes.
+3.4 **Keine Vortäuschung einer Billigung.** Sie stellen das Werk nicht als offizielles Material
+eines Vorbestehenden Werkes oder als von einem Rechtsinhaber des Vorbestehenden Werkes
+gebilligt, unterstützt oder gefördert dar. Sie verwenden Namen oder Marken des Lizenzgebers
+nicht ohne Erlaubnis zur Bewerbung des Werkes.
 
-..
-
-----
-
-4. Sonderregelung für Rechteinhaber des vorbestehenden Werks
-------------------------------------------------------------------------------------------------------------------------
-
-\ *(Gilt nur, wenn ein vorbestehendes Werk vorhanden ist — Ziffer 1.4.)*\
-
-4.1 Sind Sie **Rechteinhaber des vorbestehenden Werks**\ , so gelten Ziffer 3.1 (Namensnennung),
-Ziffer 3.3 (Weitergabe unter gleichen Bedingungen) und die **Beschränkung auf nicht kommerzielle
-Zwecke** in Ziffer 2.2 für Sie nicht. Der Lizenzgeber räumt jedem solchen Rechteinhaber
-gesondert eine **zusätzliche Erlaubnis** ein, das gesamte Werk in das vorbestehende Werk und
-dessen Bearbeitungen aufzunehmen, zu bearbeiten und zu verwerten, **ohne Pflicht zur
-Namensnennung und einschließlich kommerzieller Verwertung.**\
-
-4.2 Gleichwohl **wird die Namensnennung empfohlen.** Der Lizenzgeber wird aus dem Unterbleiben
-der Namensnennung keine Ansprüche herleiten und verpflichtet sich, Urheberpersönlichkeitsrechte
-insoweit nicht auszuüben (in Rechtsordnungen, in denen ein Verzicht auf
-Urheberpersönlichkeitsrechte unzulässig ist — etwa nach § 13 UrhG (DE), § 19 UrhG (AT), Art. 9
-URG (CH) — ist dieser Satz als schuldrechtliche Nichtausübungsvereinbarung zu lesen).
-
-4.3 Diese Sonderregelung **geht Ziffer 5 nicht vor.** Auch einem solchen Rechteinhaber sind
-Verbotene Nutzungen nicht gestattet.
-
-4.4 Diese Sonderregelung setzt nicht voraus, dass der Rechteinhaber die übrigen Bestimmungen
-dieser Lizenz annimmt. Er kann sich allein auf die zusätzliche Erlaubnis nach Ziffer 4.1
-berufen.
+3.5 **Beiträge.** Reichen Sie einen Beitrag zum Werk ein, so gilt dieser Beitrag mangels
+gesonderter schriftlicher Vereinbarung als unter derselben Lizenz bereitgestellt, je nach seiner
+Eigenart als Software-Teil oder als Text-Teil. Sie versichern, zu einer solchen Bereitstellung
+berechtigt zu sein. **Sie stimmen zu, dass die zusätzliche Gestattung nach Ziffer 4 sich
+zugunsten der Rechtsinhaber des Vorbestehenden Werkes auch auf Ihren Beitrag erstreckt, und Sie
+akzeptieren die Behandlung der Urheberpersönlichkeitsrechte nach Ziffer 4.2 im gleichen Umfang**
+— in Rechtsordnungen, die für Verzicht oder Einwilligung die Schriftform verlangen, jedoch nur,
+soweit Sie dies schriftlich (auch elektronisch) erklärt haben. Diese Ziffer berührt Ihre
+Stellung als Urheber nicht.
 
 ..
 
 ----
 
-5. Verbotene Nutzungen — vom Umfang der Rechteeinräumung ausgenommen
+4. Sonderregelung zugunsten des Rechtsinhabers des Vorbestehenden Werkes
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+*(Gilt nur, wenn ein Vorbestehendes Werk besteht — Ziffer 1.4.)*
+
+4.1 Sind Sie **Rechtsinhaber des Vorbestehenden Werkes**\ , so gelten für Sie **keine der
+Bedingungen in Ziffer 3** (3.1 Namensnennung, 3.2 Erhalt von Hinweisen, 3.3 gleiche Bedingungen,
+3.4 keine Vortäuschung einer Billigung) und **nicht die Beschränkung auf nicht-kommerzielle
+Nutzung** nach Ziffer 2.2. Der Lizenzgeber räumt jedem Rechtsinhaber des Vorbestehenden Werkes,
+unabhängig davon, ob dieser die übrigen Bestimmungen dieser Lizenz annimmt, eine **weltweite,
+unentgeltliche, nicht ausschließliche, zeitlich unbeschränkte und unwiderrufliche zusätzliche
+Gestattung** am gesamten Werk ein — es in das Vorbestehende Werk und dessen Bearbeitungen
+aufzunehmen, zu bearbeiten und zu verwerten, ohne Pflicht zur Namensnennung und einschließlich
+kommerzieller Verwertung. Diese zusätzliche Gestattung ist kein ausschließliches Nutzungsrecht
+und keine Übertragung des Urheberrechts. Satz 2 der Ziffer 3.4 (Namen oder Marken des
+Lizenzgebers nicht ohne Erlaubnis zur Bewerbung zu verwenden) gilt fort.
+
+4.1.1 Hat ein Rechtsinhaber des Vorbestehenden Werkes das Werk nach Ziffer 4.1 in das
+Vorbestehende Werk aufgenommen, so ist **die Darstellung des Ergebnisses als offizielles
+Material des Vorbestehenden Werkes keine nach Ziffer 3.4 verbotene Darstellung.**
+
+4.1.2 Ein Rechtsinhaber des Vorbestehenden Werkes **darf** die zusätzliche Gestattung nach
+Ziffer 4.1 im erforderlichen Umfang an Dritte **unterlizenzieren**\ , denen er die Nutzung für
+Veröffentlichung, Übersetzung, Verfilmung oder Merchandising des Vorbestehenden Werkes gestattet
+hat. In diesem Umfang finden § 46 Abs. 3 des koreanischen Urheberrechtsgesetzes und
+entsprechende Vorschriften anderer Rechtsordnungen keine Anwendung.
+
+4.1.3 Überträgt der Lizenzgeber die Verwertungsrechte oder tritt der Erbfall ein, so besteht die
+zusätzliche Gestattung zugunsten der Rechtsnachfolger fort.
+
+4.2 Auch dann ist **die Namensnennung empfohlen.** Hinsichtlich der Urheberpersönlichkeitsrechte
+gilt Folgendes **automatisch**\ , und zwar in der **stärksten nach dem Recht des Nutzungsortes
+zulässigen Stufe.**
+
+(a) **Wo ein Verzicht zulässig ist, verzichtet der Lizenzgeber.** Im Umfang der in Ziffer 4.1
+bestimmten Nutzung **verzichtet** der Lizenzgeber auf das Recht auf Anerkennung der
+Urheberschaft und auf Werkintegrität sowie auf entsprechende Rechte (z. B. kanadisches Copyright
+Act s. 14.1(2); UK CDPA s. 87(2)).
+
+(b) Wo ein Verzicht nicht, wohl aber eine **Einwilligung** zulässig ist, **willigt der
+Lizenzgeber im Voraus** in eine solche Nutzung und Änderung ein (z. B. australisches Copyright
+Act ss. 195AW, 195AWA).
+
+(c) Wo weder Verzicht noch Einwilligung zulässig sind, **verpflichtet sich der Lizenzgeber
+schuldrechtlich, die Urheberpersönlichkeitsrechte** in diesem Umfang **nicht auszuüben, und
+vereinbart, insoweit nicht zu klagen** — z. B. koreanisches Urheberrechtsgesetz § 14;
+japanisches Urheberrechtsgesetz Art. 59; UrhG (DE) § 13; UrhG (AT) § 19; URG (CH) Art. 9.
+
+(d) **Auf jeder der vorstehenden Stufen** ist diese Behandlung auf den Umfang der in Ziffer 4.1
+bestimmten Nutzung beschränkt und erstreckt sich nicht auf **eine Änderung oder Nutzung des
+Werkes in einer die Ehre oder den Ruf des Lizenzgebers beeinträchtigenden Weise** und nicht auf
+**die Darstellung des Werkes als Schöpfung eines Dritten, der nicht Rechtsinhaber des
+Vorbestehenden Werkes ist.** Dieser Vorbehalt ist das von zwingendem Recht geforderte
+Mindestmaß.
+
+4.3 Diese Sonderregelung **geht Ziffer 5 nicht vor.** Auch einem Rechtsinhaber des
+Vorbestehenden Werkes ist die Verbotene Nutzung nicht gestattet.
+
+4.4 Diese Sonderregelung setzt nicht voraus, dass ein Rechtsinhaber des Vorbestehenden Werkes
+die übrigen Bestimmungen dieser Lizenz annimmt. Er kann sich allein auf die zusätzliche
+Gestattung nach Ziffer 4.1 berufen.
+
+..
+
+----
+
+5. Verbotene Nutzungen — vom Umfang der Rechtseinräumung ausgenommen
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-5.1 Keine durch diese Lizenz eingeräumte Befugnis **erstreckt sich** auf die folgenden
-Nutzungen. Dies ist kein Versprechen Ihrerseits, sondern eine **Beschränkung des Umfangs der
-Rechteeinräumung selbst**\ ; eine solche Nutzung ist daher von vornherein nicht lizenziert und
-stellt eine Urheberrechtsverletzung dar.
+5.1 Keine durch diese Lizenz eingeräumte Befugnis **erstreckt sich** auf Vervielfältigung,
+Verbreitung, öffentliche Wiedergabe, Ausstellung, öffentliche Aufführung oder die Herstellung
+von Bearbeitungen zu den folgenden Zwecken. Der Lizenzgeber gestattet die Nutzung zu diesen
+Zwecken von vornherein nicht; ein Nutzungsrecht aus dieser Lizenz entsteht insoweit nicht.
 
-(a) **Verbrechen gegen die Menschlichkeit** — das Begehen, der Versuch, das Anordnen, Anstiften,
-Auffordern, Beihilfeleisten zu einer in Artikel 7 des Römischen Statuts des Internationalen
-Strafgerichtshofs beschriebenen Handlung oder die Nutzung des Werkes, um eine solche Handlung
-vorzubereiten, zu steuern, zu verschleiern oder zu rechtfertigen.
+(a) **Verbrechen gegen die Menschlichkeit** — Nutzung, um eine in Artikel 7 des Römischen
+Statuts des Internationalen Strafgerichtshofs beschriebene Handlung zu begehen oder zu
+versuchen, oder um dazu **anzuordnen, aufzufordern, anzustiften oder zu verleiten**\ , oder um
+**Beihilfe zu leisten oder in sonstiger Weise zu ihrer Begehung beizutragen**\ ; Nutzung zur
+Vorbereitung, Anleitung oder Verschleierung einer solchen Handlung; oder Nutzung, um sie in
+einer Weise zu befürworten, dazu aufzustacheln oder sie zu rechtfertigen, die nach dem Recht des
+Nutzungsortes oder nach Völkerrecht eine Straftat darstellt. Die Beteiligungsformen sind nach
+Artikel 25 Absatz 3 dieses Statuts zu verstehen.
 
-(b) **Kriegsverbrechen** — wie unter (a), bezogen auf Handlungen nach Artikel 8 desselben
-Statuts. Völkermord (Artikel 6) und das Verbrechen der Aggression (Artikel 8 bis) sind ebenfalls
-erfasst.
+(b) **Kriegsverbrechen** — wie unter (a), hinsichtlich der in Artikel 8 dieses Statuts
+beschriebenen Handlungen.
 
-(c) **Straftaten gegen Kinder** — Straftaten, deren Opfer eine Person unter 18 Jahren ist,
-insbesondere sexuelle Ausbeutung und sexueller Missbrauch von Kindern, Herstellung, Besitz oder
-Verbreitung von Darstellungen sexuellen Kindesmissbrauchs, Kinderhandel, Kinderzwangsarbeit
-sowie der Einsatz von Kindern in bewaffneten Konflikten (unter Bezugnahme auf das
-UN-Übereinkommen über die Rechte des Kindes nebst Fakultativprotokollen sowie auf das Recht des
-Nutzungsortes).
+(c) **Völkermord** (Artikel 6 dieses Statuts) und das **Verbrechen der Aggression** (Artikel 8
+bis) — wie unter (a).
 
-5.2 Bestimmt das Recht des Nutzungsortes eine der Kategorien (a) bis (c) weiter, so gilt jenes
-Recht. Ob ein Verhalten dem Wortlaut der genannten Instrumente unterfällt, wird unabhängig davon
-beurteilt, ob es tatsächlich vor einem internationalen Gericht verfolgt worden ist.
+(d) **Straftaten gegen Kinder** — wie unter (a), hinsichtlich sexueller Ausbeutung und sexuellen
+Missbrauchs von Personen unter 18 Jahren, der Herstellung, des Besitzes, der Verbreitung oder
+der öffentlichen Zurschaustellung von Darstellungen sexuellen Kindesmissbrauchs, des
+Kinderhandels, der Zwangsarbeit von Kindern, des Einsatzes von Kindern in bewaffneten Konflikten
+sowie sonstiger Straftaten gegen Leben, Körper oder sexuelle Selbstbestimmung von Kindern (nach
+Maßgabe des UN-Übereinkommens über die Rechte des Kindes und seiner Fakultativprotokolle sowie
+des Rechts des Nutzungsortes).
 
-5.3 Diese Beschränkung gilt **dauerhaft** und wird weder durch Ziffer 4 noch durch die
-Heilungsregel in Ziffer 8 noch durch den Anwendungshinweis noch durch eine sonstige Bestimmung
-gelockert.
+5.2 Bestimmt das Recht des Nutzungsortes einen der Fälle (a) bis (d) **weiter, so gilt dieses
+Recht.** Eine Erweiterung, die nicht dem Schutz der Menschenrechte, sondern der Unterdrückung
+der Meinungs-, Vereinigungs- oder Pressefreiheit dient, ist jedoch keine Erweiterung im Sinne
+dieser Ziffer. Ob ein Verhalten unter den Wortlaut der genannten Übereinkünfte fällt, wird
+unabhängig davon beurteilt, ob es tatsächlich vor einem internationalen Gericht verfolgt worden
+ist. „Nutzungsort“ ist der Ort, an dem Sie die Nutzungshandlung vornehmen, sowie der Ort, an dem
+sich ihre Wirkungen entfalten.
 
-5.4 Die Nutzung zu wissenschaftlicher Forschung, Berichterstattung, Menschenrechtsdokumentation,
-Bildung, Strafverfolgung oder zur Dokumentation, Aufdeckung, Verhütung oder Ahndung der
-vorgenannten Verbrechen ist **keine** Verbotene Nutzung.
+5.3 Diese Beschränkung ist **dauerhaft** und wird weder durch Ziffer 4 noch durch die Heilung
+nach Ziffer 8 noch durch den Anwendungshinweis noch durch eine sonstige Bestimmung gelockert.
+
+5.4 Die Nutzung zu wissenschaftlicher Forschung, journalistischer Berichterstattung,
+Menschenrechtsdokumentation, Bildung, **rechtmäßiger** Strafverfolgung und in Gerichtsverfahren,
+zu persönlichem Kommentar, Kritik, Satire oder fiktionalem Schaffen, das keine Handlung nach
+Ziffer 5.1 befürwortet oder dazu aufstachelt, sowie die Nutzung zur Dokumentation, Aufdeckung,
+Verhütung, Ermittlung, Verfolgung oder Ahndung dieser Verbrechen ist, **soweit sie dem Recht des
+Nutzungsortes entspricht**\ , keine Verbotene Nutzung.
+
+Dies gilt nicht, wenn die Nutzung selbst eine Handlung nach Ziffer 5.1 darstellt oder zu deren
+Begehung beiträgt, **und zwar auch dann nicht, wenn sie den Anschein von Strafverfolgung,
+öffentlicher Ordnung oder nationaler Sicherheit trägt. Diese Ziffer geht Ziffer 5.1 nicht vor.**
+Diese Ziffer ist auch nicht so auszulegen, dass sie ein Verhalten erlaubte, das das Recht des
+Nutzungsortes unabhängig vom Zweck verbietet (etwa die Herstellung, Bereitstellung oder den
+Besitz von Darstellungen sexuellen Kindesmissbrauchs).
+
+5.5 **Rechtsnatur.** Die Beschränkung in Ziffer 5.1 betrifft **in erster Linie den Umfang der
+nach Ziffer 2 erfolgten Rechtseinräumung.** Nur soweit das anwendbare Recht sie nicht als
+Umfangsbeschränkung anerkennt oder sie als vertragliche Pflicht qualifiziert, besteht sie als
+**vertragliche Pflicht** fort, die Sie gegenüber dem Lizenzgeber trifft (Ziffer 9.3). In beiden
+Konstruktionen kann der Lizenzgeber Unterlassung, Schadensersatz und Vernichtung der
+rechtsverletzenden Gegenstände verlangen.
 
 ..
 
 ----
 
-6. Vorbehalt der Rechte am vorbestehenden Werk
+6. Vorbehalt der Rechte am Vorbestehenden Werk
 --------------------------------------------------------------------------------------------
 
-\ *(Gilt nur, wenn ein vorbestehendes Werk vorhanden ist — Ziffer 1.4.)*\
+*(Gilt nur, wenn ein Vorbestehendes Werk besteht — Ziffer 1.4.)*
 
-6.1 Das Werk ist eine **inoffizielle Bearbeitung** des vorbestehenden Werks. Alle Rechte daran
-verbleiben bei dessen Rechteinhabern.
+6.1 Das Werk ist eine **inoffizielle Bearbeitung** des Vorbestehenden Werkes. Alle Rechte am
+Vorbestehenden Werk verbleiben bei dessen Rechtsinhabern.
 
-6.2 Diese Lizenz räumt Rechte **nur am eigenen schöpferischen Beitrag des Lizenzgebers** ein.
-Sie räumt keine Rechte an Elementen ein, die aus dem vorbestehenden Werk stammen; der
-Lizenzgeber ist auch nicht in der Lage, solche Rechte einzuräumen.
+6.2 Diese Lizenz räumt Rechte **nur an dem eigenen schöpferischen Beitrag des Lizenzgebers**
+ein. An Elementen, die aus dem Vorbestehenden Werk stammen, werden keine Rechte eingeräumt; der
+Lizenzgeber ist dazu auch nicht in der Lage. **Der Text-Teil kann aus dem Vorbestehenden Werk
+stammende Ausdrucksformen in nicht ohne Weiteres trennbarer Weise enthalten; die Gestattung des
+Lizenzgebers allein macht die Nutzung gegenüber dem Rechtsinhaber des Vorbestehenden Werkes
+nicht rechtmäßig.**
 
-6.3 Sie sind dafür verantwortlich, vor der Nutzung des Werkes selbst diejenigen Erlaubnisse
-einzuholen, die das Recht des Nutzungsortes in Bezug auf das vorbestehende Werk verlangt.
+6.3 Vor der Nutzung des Werkes obliegt es Ihnen, **selbst zu beurteilen**\ , ob diese Nutzung
+nach dem Recht des Nutzungsortes eine Gestattung hinsichtlich des Vorbestehenden Werkes
+erfordert. Soweit dieses Recht die Verwertungsrechte des Urhebers beschränkt — Zitat, Kritik,
+Forschung, Berichterstattung und dergleichen (z. B. koreanisches Urheberrechtsgesetz §§ 28 und
+35-5) — ist keine gesonderte Gestattung erforderlich. Der Lizenzgeber übernimmt für diese
+Beurteilung keine Gewähr.
 
-6.4 Verlangt ein Rechteinhaber des vorbestehenden Werks die Entfernung oder
-Nichtveröffentlichung des Werkes ganz oder teilweise, so darf der Lizenzgeber dem nachkommen;
-dies stellt keinen Verstoß gegen diese Lizenz dar. Ihre Rechte an bereits verbreiteten
-Vervielfältigungsstücken erlöschen dadurch nicht rückwirkend.
+6.4 Verlangt ein Rechtsinhaber des Vorbestehenden Werkes die Entfernung oder Zurücknahme des
+Werkes ganz oder teilweise, so darf der Lizenzgeber dem nachkommen; dies stellt keinen Verstoß
+gegen diese Lizenz dar. **Ihre Rechte an bereits verbreiteten Vervielfältigungsstücken erlöschen
+dadurch nicht.**
+
+6.5 Der Lizenzgeber darf auf Verlangen eines Rechtsinhabers des Vorbestehenden Werkes den
+**künftigen Vertrieb** unter dieser Lizenz **einstellen**\ ; eine solche Einstellung ist kein
+Widerruf bereits eingeräumter Befugnisse.
 
 ..
 
@@ -226,22 +388,27 @@ Vervielfältigungsstücken erlöschen dadurch nicht rückwirkend.
 7. Gewährleistungsausschluss; Haftungsbeschränkung
 ----------------------------------------------------------------------------------------------------
 
-7.1 Das Werk wird **„wie besehen"** zur Verfügung gestellt, ohne jede ausdrückliche oder
+7.1 Das Werk wird **„wie besehen“** bereitgestellt, ohne jede ausdrückliche oder
 stillschweigende Gewährleistung, einschließlich der Gewährleistung der Marktgängigkeit, der
-Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter.
+Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. Zu
+berücksichtigen ist, dass das Werk **unentgeltlich** bereitgestellt wird und dass der
+Lizenzgeber den Rechtsmangel nach Ziffer 6 vorab offengelegt hat.
 
 7.2 Soweit gesetzlich zulässig, haftet der Lizenzgeber nicht für Schäden, die aus der Nutzung
 oder der Unmöglichkeit der Nutzung des Werkes entstehen.
 
-7.3 **Jedoch** gelten die Ziffern 7.1 und 7.2 nicht für Schäden aus **Vorsatz oder grober
-Fahrlässigkeit** des Lizenzgebers, für die Verletzung des Lebens, des Körpers oder der
-Gesundheit sowie für Schäden, deren Ausschluss das anwendbare Recht verbietet; bei Verletzung
-wesentlicher Vertragspflichten (Kardinalpflichten) haftet der Lizenzgeber der Höhe nach begrenzt
-auf den vertragstypischen, vorhersehbaren Schaden. Diese Ziffer ist, soweit erforderlich,
-geltungserhaltend an die zwingenden Vorschriften der jeweiligen Rechtsordnung anzupassen (etwa
-§§ 305 ff. BGB und § 309 Nr. 7 BGB (DE); § 6 KSchG und § 879 ABGB (AT); Art. 100 und 101 OR
-(CH); das koreanische Gesetz zur Regelung von Allgemeinen Geschäftsbedingungen; Unfair Contract
-Terms Act 1977 und Consumer Rights Act 2015 (UK)).
+7.3 **Jedoch** gelten die Ziffern 7.1 und 7.2 nicht für: Schäden aus Vorsatz oder Arglist des
+Lizenzgebers **oder seiner gesetzlichen Vertreter oder Erfüllungsgehilfen**\ ; Schäden, die
+durch ein **gröbliches Außerachtlassen** der vom Lizenzgeber üblicherweise zu beachtenden
+Sorgfalt verursacht wurden; Schäden aus der Verletzung des Lebens, des Körpers oder der
+Gesundheit, **ohne Rücksicht auf den Grad des Verschuldens**\ ; die Haftung aus einer vom
+Lizenzgeber ausdrücklich übernommenen Garantie; sowie alle Schäden, für die das anwendbare Recht
+**oder zwingendes Recht des Nutzungsortes** einen Haftungsausschluss verbietet. Bei leicht
+fahrlässiger Verletzung einer für die Erreichung des Vertragszwecks wesentlichen Pflicht ist die
+Haftung des Lizenzgebers auf den bei Verträgen dieser Art typischerweise vorhersehbaren Schaden
+begrenzt. Die Ziffern 7.1 und 7.2 gelten in dem Umfang eingeschränkt, den die zwingenden
+Vorschriften des Nutzungsortes verlangen; im Übrigen bleiben sie wirksam. Beispiele für solche
+zwingenden Vorschriften finden sich in **Anhang A**\ .
 
 ..
 
@@ -250,72 +417,103 @@ Terms Act 1977 und Consumer Rights Act 2015 (UK)).
 8. Verstoß und Beendigung
 --------------------------------------------------
 
-8.1 Verstoßen Sie gegen eine Bedingung der Ziffer 3, so **enden Ihre Rechte** aus dieser Lizenz
-**automatisch.**\
+8.1 Nutzen Sie das Werk **über den Umfang der Rechtseinräumung nach Ziffer 2 hinaus**
+(einschließlich der Beschränkung auf nicht-kommerzielle Nutzung nach Ziffer 2.2) oder verstoßen
+Sie gegen eine Bedingung in Ziffer 3, so enden Ihre Rechte aus dieser Lizenz **automatisch.**
+Eine Nutzung über den Umfang der Ziffer 2 hinaus war zu keinem Zeitpunkt gestattet.
 
-8.2 Fällt der Verstoß nicht unter Ziffer 5 und beheben Sie ihn innerhalb von **30 Tagen**\ ,
-nachdem Sie von ihm Kenntnis erlangt haben oder auf ihn hingewiesen worden sind, so gelten Ihre
-Rechte als **nie beendet** — es sei denn, der Lizenzgeber hat sie ausdrücklich und endgültig
-beendet.
+8.2 Fällt der Verstoß nicht unter Ziffer 5 und **stellen Sie ihn ein**\ , so leben Ihre Rechte
+**vorläufig** wieder auf und bestehen fort, bis der Lizenzgeber sie ausdrücklich und endgültig
+beendet. Heilen Sie den Verstoß ferner innerhalb von **30 Tagen nach Zugang einer Mitteilung des
+Lizenzgebers** darüber oder, mangels einer Mitteilung, innerhalb von **30 Tagen ab erstmaliger
+Kenntnis**\ , so leben Ihre Rechte **so wieder auf, als wären sie nie beendet worden; dieses
+Wiederaufleben hängt nicht vom Willen des Lizenzgebers ab.**
 
-8.3 **Die Heilung nach Ziffer 8.2 gilt nicht für einen Verstoß gegen Ziffer 5,** da eine solche
-Nutzung außerhalb des Umfangs der Rechteeinräumung liegt und insoweit nie Rechte aus dieser
-Lizenz bestanden haben.
+8.2.1 Der Lizenzgeber kann Ihre Rechte nur dann endgültig beenden, wenn der Verstoß nach Ablauf
+der Heilungsfrist nach Ziffer 8.2 fortbesteht, und zwar durch schriftliche (auch elektronische)
+Mitteilung unter Angabe der Gründe. Eine vor oder während der Heilungsfrist erklärte Beendigung
+wirkt nur als Mitteilung nach Ziffer 8.2. Die Mitteilung ist an die im Anwendungshinweis
+angegebene Stelle zu richten und gilt 7 Tage nach Absendung als zugegangen.
+
+8.2.2 **Teilt der Lizenzgeber einen Verstoß nicht innerhalb von 60 Tagen ab Kenntnis mit, so
+leben Ihre Rechte endgültig wieder auf.**
+
+8.3 **Die Heilung nach Ziffer 8.2 gilt nicht für einen Verstoß gegen Ziffer 5**\ , da eine
+solche Nutzung außerhalb des Umfangs der Rechtseinräumung liegt und insoweit nie Rechte aus
+dieser Lizenz bestanden.
 
 8.4 Die Rechte Dritter, die von Ihnen rechtmäßig Vervielfältigungsstücke erhalten haben, bleiben
-von der Beendigung Ihrer Rechte unberührt.
+von der Beendigung Ihrer Rechte unberührt (Ziffer 2.5).
 
 ..
 
 ----
 
-9. Anwendbares Recht und salvatorische Klausel
---------------------------------------------------------------------------------------------
+9. Anwendbares Recht und salvatorische Regelung
+----------------------------------------------------------------------------------------------
 
-9.1 Diese Lizenz unterliegt dem **im Anwendungshinweis bestimmten Recht**\ , hilfsweise dem
-**Recht der Republik Korea.** Sind Sie Verbraucher, so werden die zwingenden Schutzvorschriften
-des Rechts Ihres gewöhnlichen Aufenthalts durch diese Ziffer nicht verdrängt.
+9.1 Diese Lizenz unterliegt dem **im Anwendungshinweis bestimmten Recht**\ , mangels einer
+solchen Bestimmung dem **Recht der Republik Korea.** Sind Sie Verbraucher, so werden die
+zwingenden Schutzvorschriften des Rechts Ihres gewöhnlichen Aufenthalts durch diese Ziffer nicht
+verdrängt.
 
-9.2 Ist eine Bestimmung in einer Rechtsordnung unwirksam oder undurchsetzbar, so bleiben die
-übrigen Bestimmungen davon unberührt. Eine unwirksame Bestimmung ist **auf den größten wirksamen
-Umfang zurückzuführen, der ihrem Zweck am nächsten kommt.**\
+9.1.1 **Bestand, Inhaberschaft und Verletzung des Urheberrechts sowie die daraus folgenden
+Ansprüche richten sich nach dem Recht des Schutzlandes** (dem Urheberrecht des Nutzungsortes).
+Die Rechtswahl in Ziffer 9.1 betrifft die vertraglichen Aspekte dieser Lizenz. **Diese Lizenz
+trifft keine Bestimmung über die Zuständigkeit.**
 
-9.3 Erklärt zwingendes Recht einer Rechtsordnung eine Einsatzgebietsbeschränkung wie Ziffer 5
-für unwirksam, so besteht diese Beschränkung gleichwohl als **schuldrechtliche Verpflichtung**
-fort, soweit sie wirksam ist.
+9.2 Ist eine Bestimmung in einer Rechtsordnung unwirksam oder nicht durchsetzbar, so bleiben die
+übrigen Bestimmungen unberührt. **An die Stelle der unwirksamen Bestimmung treten die
+gesetzlichen Vorschriften jener Rechtsordnung.** Nur soweit das Recht jener Rechtsordnung dies
+zulässt, vereinbaren der Lizenzgeber und Sie, die Bestimmung durch eine wirksame zu ersetzen,
+die ihrem Zweck am nächsten kommt. **Lässt zwingendes Recht jener Rechtsordnung eine solche
+Reduktion oder Ersetzung nicht zu (etwa § 306 Abs. 2 BGB), so ist die Bestimmung dort insgesamt
+unwirksam.**
+
+9.3 Die Beschränkung in Ziffer 5 betrifft in erster Linie den Umfang der Rechtseinräumung
+(Ziffer 5.5); soweit jedoch zwingendes Recht einer Rechtsordnung Beschränkungen des
+Einsatzbereichs für unwirksam erklärt oder ein Gericht sie **als vertragliche Pflicht
+qualifiziert**\ , besteht die Beschränkung als vertragliche Pflicht in dem Umfang fort, in dem
+sie wirksam ist.
 
 ..
 
 ----
 
-10. Versionen und Übersetzungen
+10. Fassungen und Übersetzungen
 --------------------------------------------------------------
 
 10.1 **Maßgeblich ist der koreanische Text.** Der englische, japanische und deutsche Text sind
-Übersetzungen zur Erleichterung des Verständnisses; bei Abweichungen geht der koreanische Text
-vor.
+Übersetzungen zur Erleichterung; bei Abweichungen geht der koreanische Text vor.
 
-10.2 Der Lizenzgeber kann spätere Versionen dieser Lizenz veröffentlichen. Trägt der
-Anwendungshinweis den Vermerk „NEPLv1 oder jede spätere Version", so können Sie jede Version
-wählen. Fehlt eine Versionsangabe, gilt Version 1.
+10.2 **Feste Fassungen.** Neue Fassungen dieser Lizenz werden **ausschließlich vom
+Lizenzverwalter (Ziffer 1.12)** veröffentlicht. Ein einzelner Lizenzgeber darf keine neue
+Fassung veröffentlichen. **Auf ein Werk findet nur die im Anwendungshinweis angegebene Fassung
+Anwendung; eine Wahlmöglichkeit wie „oder eine spätere Fassung“ gibt es nicht.** Will ein
+Lizenzgeber zu einer neuen Fassung übergehen, so muss er den Anwendungshinweis ändern und neu
+verbreiten; bereits eingeräumte Befugnisse bleiben unberührt. **Keine Fassung darf die
+Verbotenen Nutzungen nach Ziffer 5 streichen oder ihren sachlichen Umfang einschränken oder
+lockern; ein Dokument ohne eine solche Beschränkung ist keine Fassung dieser Lizenz.**
 
 10.3 Dieses Lizenzdokument selbst **darf wortgetreu vervielfältigt und verbreitet werden, und
-jede Person darf es auf ihr eigenes Werk anwenden.** Es steht Ihnen frei, geänderte Fassungen zu
-erstellen; in diesem Fall **dürfen Sie den Namen „NEWSNIPER Ethical Public License" und die
-Abkürzung „NEPL" nicht verwenden.**\
+jedermann darf es auf eigene Werke anwenden.** Sie dürfen geänderte Fassungen erstellen; in
+diesem Fall **verwenden Sie jedoch nicht den Namen „NEWSNIPER Ethical Public License“ und nicht
+die Abkürzung „NEPL“.** **Die Übersetzung dieser Lizenz in eine andere Sprache ist jedoch
+gestattet, und eine solche Übersetzung darf den Namen dieser Lizenz tragen** — eine Übersetzung
+hat anzugeben, dass sie eine Übersetzung ist und dass der koreanische Text maßgeblich ist.
 
 ..
 
 ----
 
-11. Geist — unverbindlicher Nachsatz
-------------------------------------------------------------------------
+11. Geist — unverbindliche Nachbemerkung
+--------------------------------------------------------------------------------
 
-Drei Dinge werden von jedem erbeten, der diese Lizenz verwendet. **Gib nicht als dein eigenes
-aus, was jemand anderes geschaffen hat. Benutze es nicht, um Menschen zu schaden. Und wenn du
-auf etwas stehst, vergiss nicht, dass es da ist.**\
+Von jedem, der diese Lizenz verwendet, wird dreierlei erbeten. **Gib nicht als Eigenes aus, was
+ein anderer gemacht hat. Verwende es nicht, um Menschen zu schaden. Und wenn du auf etwas
+stehst, vergiss nicht, dass es da ist.**
 
-Diese Ziffer begründet keine Rechte oder Pflichten.
+Diese Ziffer begründet weder Rechte noch Pflichten.
 
 ..
 
@@ -324,40 +522,74 @@ Diese Ziffer begründet keine Rechte oder Pflichten.
 12. Anwendungshinweis — wie Sie diese Lizenz auf Ihr eigenes Werk anwenden
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-Legen Sie im Wurzelverzeichnis des Repositorys eine Datei ``LICENSE`` (oder ``NOTICE``\ ) an und
-füllen Sie das folgende Formular aus. Nicht ausgefüllte Punkte gelten als „keine".
+Legen Sie im obersten Verzeichnis des Repositorys eine Datei ``LICENSE`` (oder ``NOTICE``\ ) an
+und füllen Sie das folgende Formular aus. Nicht ausgefüllte Punkte gelten als „keine“.
 
 ::
 
    NEWSNIPER Ethical Public License v1 — Anwendungshinweis
    
-   Werk:                 <Name / Repository>
-   Lizenzgeber:          <Name oder Organisation> <Kontakt (optional)>
-   Urheberrecht:         Copyright (c) <Jahr> <Name>
-   Version:              NEPLv1            (oder „NEPLv1 oder jede spätere Version")
-   Volltext der Lizenz:  LICENSES/NEPL-v1.ko.md  (Übersetzungen en / ja / de beigefügt)
+   Werk:              <Name / Repository>
+   Lizenzgeber:       <Name oder Organisation>
+   Mitteilungen an:   <Anschrift oder E-Mail>  (wohin eine Mitteilung nach Ziffer 8.2.1 gelangt)
+   Urheberrecht:      Copyright (c) <Jahr> <Name>
+   Fassung:           NEPLv1
+   Lizenztext:        <Pfad>
    
-   Vorbestehendes Werk:  <falls vorhanden: Titel, Urheber, Rechteinhaber; sonst „keines" — Ziffern 4 und 6 finden keine Anwendung>
+   Vorbestehendes Werk: <falls vorhanden: Titel, Urheber, Rechtsinhaber; sonst "keines" —
+                       dann gelten die Ziffern 4 und 6 nicht>
    Gesondert lizenzierte Teile:
-                         <Pfad> — <Lizenz> (<Rechteinhaber>)
-                         ...
-   Kommerzielle Nutzung des Text-Teils:  nicht gestattet (Standard)  |  gestattet (Lockerung der Ziffer 2.2)
-   Anwendbares Recht:    <Staat>   (Standard: Republik Korea)
+                      <Pfad> — <Lizenz> (<Rechtsinhaber>)
+   Von der Rechtseinräumung ausgenommen:
+                      <Pfad oder Bedingung>   (Ziffer 1.1 — kann entfallen)
+   
+   Software-Teil:            <Pfade>   (nicht aufgeführte Dateien sind Text-Teil — Ziffer 1.3.1)
+   Kommerzielle Nutzung des Text-Teils: nicht gestattet (Vorgabe) | gestattet
+   Gleiche Bedingungen (Ziffer 3.3):    gilt nicht (Vorgabe)      | gilt
+   Anwendbares Recht: <Staat>                (Vorgabe: Republik Korea)
 
 Der Anwendungshinweis gilt als Teil dieser Lizenz; **eine Angabe darin, die Ziffer 5 lockern
-würde, ist unwirksam.**\
+würde, ist unwirksam.**
 
 12.1 **Die einzige ausdrückliche, bedingungslose Gestattung dieser Lizenz.** Diese Lizenz
 **trifft keinerlei Bestimmung darüber, in welchem Dokumentformat** sie und der Anwendungshinweis
-abgefasst oder beigefügt werden. Reiner Text, Markdown, HTML, PDF, reStructuredText, AsciiDoc,
-Typst, LaTeX, ODF, Bilder, Audio, Braille — alles ist zulässig; Dateinamen und Endungen sind
-frei; mehrere Formate dürfen nebeneinander beigefügt werden. Es genügt, dass ein Mensch sie mit
-gewöhnlichen Mitteln lesen kann und dass **der Wortlaut unverändert** ist. Diese Gestattung
-erfolgt bedingungslos; keine andere Ziffer schränkt sie ein.
+zu verfassen oder beizufügen sind. Reiner Text, Markdown, HTML, PDF, reStructuredText, AsciiDoc,
+Typst, LaTeX, ODF, Bild, Ton, Blindenschrift — all dies genügt; Dateinamen und Endungen sind
+frei, und mehrere Formate dürfen nebeneinander beigefügt werden. Es genügt, dass ein Mensch sie
+mit üblichen Mitteln lesen kann und dass **der Wortlaut unverändert ist** — „Wortlaut“ meint
+hier die Nummerierung der Ziffern und den Sinn der Worte; Unterschiede in Layout, Zeilenumbruch,
+Auszeichnung oder Schrift sind keine Änderung des Wortlauts. Diese Gestattung erfolgt
+bedingungslos, und keine andere Bestimmung beschränkt sie.
+
+12.2 **Empfehlung (unverbindlich).** In maschinenlesbaren Metadaten wird die Verwendung von
+``LicenseRef-NEPL-1.0`` empfohlen. Dies ist eine Empfehlung; ihre Nichtbefolgung ist kein
+Verstoß gegen Ziffer 3 (Ziffer 12.1).
 
 ..
 
 ----
 
-\ *NEWSNIPER Ethical Public License v1 — Entwurf. Der endgültige Wortlaut bleibt der rechtlichen
-Prüfung vorbehalten. Dieses Dokument stellt keine Rechtsberatung dar.*\
+Anhang A — Zur Orientierung: Beispiele zwingender Vorschriften nach Rechtsordnung (unverbindlich)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dieser Anhang begründet weder Rechte noch Pflichten; die Aufzählung ist beispielhaft und nicht
+abschließend.
+
+- **Republik Korea** — Gesetz über die Regelung Allgemeiner Geschäftsbedingungen §§ 6, 7, 9;
+  Bürgerliches Gesetz § 559
+- **Deutschland** — BGB §§ 305 ff., § 306 Abs. 2, § 307, § 309 Nr. 7
+- **Österreich** — KSchG § 6; ABGB § 879 Abs. 3
+- **Schweiz** — OR Art. 100, 101
+- **Vereinigtes Königreich** — Unfair Contract Terms Act 1977; Consumer Rights Act 2015
+- **Japan** — Verbrauchervertragsgesetz Art. 8; Bürgerliches Gesetzbuch Art. 548-2 ff.
+  (Allgemeine Geschäftsbedingungen)
+- **Australien** — Competition and Consumer Act 2010 Sch. 2 (ACL) ss. 18, 23–25, 64
+- **Kanada** — Copyright Act s. 14.1(2); Code civil du Québec Art. 1435–1437
+- **Vereinigte Staaten** — U.C.C. §§ 2-316, 2-719
+
+..
+
+----
+
+*NEWSNIPER Ethical Public License v1 — Entwurf, zweite Fassung. Der endgültige Wortlaut wird
+nach juristischer Prüfung festgelegt. Dieses Dokument ist keine Rechtsberatung.*
