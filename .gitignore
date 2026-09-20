@@ -21,3 +21,6 @@ __pycache__/
 .env
 .env.*
 *.bak
+
+# Typst 편집기(Katvan)의 임시 파일
+**/.katvan_*
