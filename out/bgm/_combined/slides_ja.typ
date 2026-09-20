@@ -35,7 +35,7 @@
   #text(size: 1.0em)[二つのシークエンスを続けて ― エイランが禁書と向き合った場から二人の姉妹が眠りに落ちる瞬間まで]
   #v(0.9em)
   #text(size: 0.72em, fill: dim)[原典 v2.2.2 · 音源三つを切らず丸ごと · その間の無音の長さはこのデッキの仮案である · 生成物]
-  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ja", generator: "tools/sequence_demo_build.py", touying: "0.7.4", sha_11ja: "8ac5ccb07b26bdf9", sha_11ko: "5cd9456001939a74", sha_12ja: "b3fb5f9ea517ef5c", sha_12ko: "4d5210a4abcd92fb", sha_cues: "65b325bf146516f4")) <sync-meta>]
+  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ja", generator: "tools/sequence_demo_build.py", touying: "0.7.4", sha_11ja: "8ac5ccb07b26bdf9", sha_11ko: "a64407af54d1c361", sha_12ja: "b3fb5f9ea517ef5c", sha_12ko: "4d5210a4abcd92fb", sha_cues: "65b325bf146516f4")) <sync-meta>]
 ]
 
 #slide(repeat: 2, self => [

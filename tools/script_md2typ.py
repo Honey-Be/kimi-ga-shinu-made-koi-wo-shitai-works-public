@@ -10,6 +10,11 @@
 
 `--check` 는 쓰지 않고 대조만 한다(생성물이 최신인지).
 
+**손으로 쓴 .typ 는 건너뛴다.** 생성물에는 머리에 「생성물 — 손으로 고치지 않는다」
+표지가 있고, 그 표지가 없는 .typ 는 이 생성기가 생기기 전에 손으로 쓴 파일이다
+(〈비창〉 1악장 대본이 그렇다). 그런 파일은 대조에서도 빼고 덮어쓰지도 않는다 —
+`proposals/P75` 5절, 제안자의 결정.
+
 다루는 것 — 제목/소제목 · **굵게** · _(기울임 괄호)_ · `코드` · > 인용 블록 ·
 표 · --- 구분선 · 글머리표 · 번호 목록.
 """
@@ -158,17 +163,31 @@ def title_of(md: str, fallback: str) -> str:
     return m.group(1) if m else fallback
 
 
+GEN_MARK = "// 생성물 — 손으로 고치지 않는다."
+
+
+def is_generated(dst: Path) -> bool:
+    """이 .typ 가 생성기의 것인가 — 머리의 표지로 가른다.
+
+    표지가 없으면 손으로 쓴 파일이므로 대조에서 빼고 덮어쓰지도 않는다.
+    """
+    return any(ln.startswith(GEN_MARK) for ln in dst.read_text().split("\n")[:6])
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("paths", nargs="+")
     ap.add_argument("--check", action="store_true", help="쓰지 않고 최신인지 대조만 한다")
     a = ap.parse_args()
 
-    stale = []
+    stale, byhand = [], []
     for p in (Path(x) for x in a.paths):
+        dst = p.with_suffix(".typ")
+        if dst.exists() and not is_generated(dst):
+            byhand.append(str(dst))
+            continue
         md = p.read_text()
         lang = "ja" if p.stem.endswith("_ja") else "ko"
-        dst = p.with_suffix(".typ")
         typ = convert(md, p.name, title_of(md, p.stem), lang, dst.name)
         if a.check:
             if not dst.exists() or dst.read_text() != typ:
@@ -176,6 +195,8 @@ def main() -> int:
         else:
             dst.write_text(typ)
             print(f"{p} → {dst}  ({len(typ)} 바이트)")
+    for d in byhand:
+        print(f"건너뜀 — 손으로 쓴 것: {d}")
     if a.check:
         if stale:
             print("최신이 아님: " + ", ".join(stale))

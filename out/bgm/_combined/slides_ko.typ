@@ -35,7 +35,7 @@
   #text(size: 1.0em)[두 시퀀스를 연이어 — 에이란이 금서와 마주한 자리부터 두 자매가 잠드는 순간까지]
   #v(0.9em)
   #text(size: 0.72em, fill: dim)[원전 v2.2.2 · 음원 셋을 자르지 않고 통째로 · 그 사이의 무음 길이는 이 덱의 가안이다 · 생성물]
-  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ko", generator: "tools/sequence_demo_build.py", touying: "0.7.4", sha_11ja: "8ac5ccb07b26bdf9", sha_11ko: "5cd9456001939a74", sha_12ja: "b3fb5f9ea517ef5c", sha_12ko: "4d5210a4abcd92fb", sha_cues: "65b325bf146516f4")) <sync-meta>]
+  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ko", generator: "tools/sequence_demo_build.py", touying: "0.7.4", sha_11ja: "8ac5ccb07b26bdf9", sha_11ko: "a64407af54d1c361", sha_12ja: "b3fb5f9ea517ef5c", sha_12ko: "4d5210a4abcd92fb", sha_cues: "65b325bf146516f4")) <sync-meta>]
 ]
 
 #slide(repeat: 2, self => [
