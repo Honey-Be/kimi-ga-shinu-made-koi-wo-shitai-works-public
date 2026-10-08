@@ -108,6 +108,10 @@ scripts-pdf:
     typst compile {{fonts}} "out/script/번외편_II_허니문_II_대본/script_ja.typ" build/II_script_ja.pdf
     typst compile {{fonts}} "out/script/번외편_IV_허니문_IV_대본/script_ko.typ" build/IV_script_ko.pdf
     typst compile {{fonts}} "out/script/번외편_IV_허니문_IV_대본/script_ja.typ" build/IV_script_ja.pdf
+    typst compile {{fonts}} "out/bgm/11_비창_1악장_시퀀스_대본/script_ko.typ" build/11_script_ko.pdf
+    typst compile {{fonts}} "out/bgm/11_비창_1악장_시퀀스_대본/script_ja.typ" build/11_script_ja.pdf
+    typst compile {{fonts}} "out/bgm/12_동귀어진_폭로방송_시퀀스_대본/script_ko.typ" build/12_script_ko.pdf
+    typst compile {{fonts}} "out/bgm/12_동귀어진_폭로방송_시퀀스_대본/script_ja.typ" build/12_script_ja.pdf
     @echo "단편소설·헌정곡은 각 폴더의 파일 머리 주석대로 컴파일한다(III 대본은 아직 없다)"
 
 # 프리퀄·스핀오프 .md → .typ (tools/script_md2typ.py 생성물) + 컴파일 확인

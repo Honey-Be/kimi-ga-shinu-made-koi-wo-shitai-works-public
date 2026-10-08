@@ -41,7 +41,7 @@ web/touying-exporter/                       touying-exporter fork(submodule, MIT
 ```sh
 just compile     # 원전 4종(통합·동반 KO/JA) → build/*.pdf — merged_ko 403쪽
 just docs-typ    # 프리퀄·스핀오프 .md → .typ 재생성(script_md2typ) + 컴파일
-just scripts-pdf # 대본 6종 → build/*.pdf (결말부 단편소설은 음원 미첨부로 컴파일)
+just scripts-pdf # 대본 11종(결말부 · 번외편 I·II·IV · 시퀀스 11·12번) → build/*.pdf
 just demo-setup audio_dv=… audio_br=… audio_tc=…   # 데모 — 음원은 각자 사본
 just demo-slides && just demo-build && just demo-check && just demo-e2e
 ```

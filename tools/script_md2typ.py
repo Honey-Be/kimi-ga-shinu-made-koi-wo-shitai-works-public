@@ -133,7 +133,8 @@ def emphasis(t: str) -> str:
     묶음을 홑별 둘로 쪼개 다시 훑는다. 낱말 안의 밑줄(OPEN_QUESTIONS)은
     강조가 아니므로 양쪽이 ASCII 낱말 글자면 그대로 둔다. 대괄호는 닫는
     괄호와 겹치지 않게 다 이스케이프하고, 함수꼴로 닫힌 뒤 바로 오는
-    ( 는 인자 목록으로 붙으므로 \\( 로 막는다.
+    ( 는 인자 목록으로 붙으므로 \\( 로 막는다. 재시도에도 줄 끝에 열린
+    채 남는 강조는(원전이 미짝인 경우 — 관대한 markdown 렌더러처럼) 닫아 준다.
     """
     out, strong, emph, cands = _scan(t, frozenset())
     if strong or emph:  # 균형 안 잡힘 — 후보 묶음을 하나씩 쪼개 본다
@@ -142,6 +143,8 @@ def emphasis(t: str) -> str:
             if not s2 and not e2:
                 return "".join(out2)
             out, strong, emph = out2, s2, e2
+    if strong or emph:  # 그래도 남으면 닫는다 — ] 은 열린 것 가장 안쪽부터 닫으므로 쌓인 수만큼이면 충분하다
+        out = out + ["]" * (strong + emph)]
     return "".join(out)
 
 
