@@ -14,9 +14,10 @@ docs/
                                             미래편 · 음악 설계 · 미해결 (Typst, KO/JA 록스텝)
     reference/kimishinu_history_{ko,ja}_v2.9.typ
                                             동반 문서 「역사, 픽션, 그리고 갚아야 할 것」
-    kimishinu_prequel_{ko,ja}_v0.16.md      프리퀄 구상(부모 세대)
-    kimishinu_spinoff_{ko,ja}_v0.6.md       스핀오프 구상 — 이 공개판은 성교육편(병) 절만
-                                            뺀 것이다(자문 응답 대기 중)
+    kimishinu_prequel_{ko,ja}_v0.16.{md,typ}
+                                            프리퀄 구상(부모 세대) — .typ 는 변환기 생성물
+    kimishinu_spinoff_{ko,ja}_v0.6.{md,typ}  스핀오프 구상 — 이 공개판은 성교육편(병) 절만
+                                            뺀 것이다(자문 응답 대기 중). .typ 는 생성물
     _diagrams/                              통합 문서 컴파일에 쓰는 지도·타임라인·인물관계도
                                             (인물관계도 v2.2 는 독립 도표로도 들어 있다)
 
@@ -39,6 +40,7 @@ web/touying-exporter/                       touying-exporter fork(submodule, MIT
 
 ```sh
 just compile     # 원전 4종(통합·동반 KO/JA) → build/*.pdf — merged_ko 403쪽
+just docs-typ    # 프리퀄·스핀오프 .md → .typ 재생성(script_md2typ) + 컴파일
 just scripts-pdf # 대본 6종 → build/*.pdf (결말부 단편소설은 음원 미첨부로 컴파일)
 just demo-setup audio_dv=… audio_br=… audio_tc=…   # 데모 — 음원은 각자 사본
 just demo-slides && just demo-build && just demo-check && just demo-e2e

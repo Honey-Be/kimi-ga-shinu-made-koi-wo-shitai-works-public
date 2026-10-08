@@ -51,22 +51,103 @@ def esc(t: str) -> str:
     return t.replace("\\", "\\\\").replace("#", "\\#").replace("$", "\\$").replace("@", "\\@")
 
 
+def _scan(t: str, splits: frozenset[int]) -> tuple[list[str], int, int, list[int]]:
+    """한 줄을 훑는다. splits 는 「닫기+열기로 쪼갤 ** 묶음」의 시작 위치."""
+    out: list[str] = []
+    i = 0
+    n = len(t)
+    strong = emph = 0  # 열린 #strong[…] · #emph[…] 수
+    closed = False  # 직전 토막이 함수 닫는 괄호로 끝났나
+    cands: list[int] = []  # 닫기+열기로 쪼갤 후보 — 행이 안 균형 잡힐 때 쓴다
+    while i < n:
+        c = t[i]
+        prev = t[i - 1] if i else ""
+        if c == "`":
+            j = t.find("`", i + 1)
+            if j == -1:  # 짝 없는 백틱 — 글자대로 둔다
+                out.append(esc("`"))
+                i += 1
+            else:
+                out.append("#raw(" + typ_str(t[i + 1 : j]) + ")")
+                i = j + 1
+                closed = True
+        elif t[i : i + 2] == "**" and i not in splits:
+            flanked = prev and not prev.isspace() and i + 2 < n and not t[i + 2].isspace()
+            if flanked and not strong and emph:
+                cands.append(i)
+            if strong and prev and not prev.isspace():
+                out.append("]")
+                strong -= 1
+                closed = True
+            else:
+                out.append("#strong[")
+                strong += 1
+                closed = False
+            i += 2
+        elif c == "*" or (
+            c == "_"
+            and not (
+                0 < i < n - 1
+                and t[i - 1].isascii()
+                and t[i - 1].isalnum()
+                and t[i + 1].isascii()
+                and t[i + 1].isalnum()
+            )
+        ):
+            if emph and prev and not prev.isspace():
+                out.append("]")
+                emph -= 1
+                closed = True
+            else:
+                out.append("#emph[")
+                emph += 1
+                closed = False
+            i += 1
+        elif c in "[]":
+            out.append("\\" + c)
+            closed = False
+            i += 1
+        elif c == "(" and closed:
+            out.append("\\(")  # #strong[…](…) 가 함수 호출로 읽히지 않게
+            closed = False
+            i += 1
+        else:
+            out.append(esc(c).replace("~", "\\~"))
+            closed = False
+            i += 1
+    return out, strong, emph, cands
+
+
+def emphasis(t: str) -> str:
+    """markdown 강조를 Typst 로 옮긴다 — **굵게** → #strong[…], 기울임(*…* · _…_) → #emph[…].
+
+    한 줄을 한 번에 훑는다. `코드` 스팬을 미리 자르면 스팬을 낀 기울임
+    (_(… `code` …)_)에서 열림 상태가 조각 사이에서 리셋되어 닫는 _ 를 다시
+    열어버리므로, 백틱 구간은 불투명하게 건너뛴다(#raw 로 내보내고 이어서
+    훑는다). 강조를 마크업 *…*_…_ 로 두면 Typst 의 인접 규칙(낱말 글자 뒤의
+    여는 _, *_…_* 순서)과 ***…***(굵게+기울임)·겹침에서 마커가 짝을 잃어
+    못 읽으므로 둘 다 함수꼴로 낸다. 열고 닫음은 스택으로 센다 — 같은 종류의
+    겹침(*…* *(…)* …)이 있으므로 토글로는 안 되고, 닫는 마커는 「직전
+    글자가 공백이 아니다」(right-flanking)로 가른다. 「*닫기·열기*가 붙은
+    ** 묶음(…\\*\\*）\\*\\*(…)」은 굵게로 읽으면 행이 안 균형 잡히므로, 그럴 때
+    묶음을 홑별 둘로 쪼개 다시 훑는다. 낱말 안의 밑줄(OPEN_QUESTIONS)은
+    강조가 아니므로 양쪽이 ASCII 낱말 글자면 그대로 둔다. 대괄호는 닫는
+    괄호와 겹치지 않게 다 이스케이프하고, 함수꼴로 닫힌 뒤 바로 오는
+    ( 는 인자 목록으로 붙으므로 \\( 로 막는다.
+    """
+    out, strong, emph, cands = _scan(t, frozenset())
+    if strong or emph:  # 균형 안 잡힘 — 후보 묶음을 하나씩 쪼개 본다
+        for pos in cands:
+            out2, s2, e2, _ = _scan(t, frozenset({pos}))
+            if not s2 and not e2:
+                return "".join(out2)
+            out, strong, emph = out2, s2, e2
+    return "".join(out)
+
+
 def inline(t: str) -> str:
     """한 줄 안의 마크업을 옮긴다."""
-    out: list[str] = []
-    # `코드` 는 안쪽을 건드리지 않는다
-    for i, part in enumerate(re.split(r"(`[^`]*`)", t)):
-        if i % 2:
-            out.append("#raw(" + typ_str(part[1:-1]) + ")")
-            continue
-        s = esc(part)
-        # **굵게** → *굵게*. 짝을 regex 로 맞추지 않고 하나씩 바꾼다 —
-        # 굵은 범위가 `코드` 를 건너뛰는 경우(**앞 `x` 뒤**)에도 짝이 맞기 때문이다.
-        s = s.replace("**", "*")
-        s = re.sub(r"(?<!\w)_\((.+?)\)_", r"_(\1)_", s)   # _(괄호)_ 는 그대로
-        s = s.replace("~", "\\~")
-        out.append(s)
-    return "".join(out)
+    return emphasis(t)
 
 
 def typ_str(s: str) -> str:

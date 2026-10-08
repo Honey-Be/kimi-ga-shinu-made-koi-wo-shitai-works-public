@@ -109,3 +109,10 @@ scripts-pdf:
     typst compile {{fonts}} "out/script/번외편_IV_허니문_IV_대본/script_ko.typ" build/IV_script_ko.pdf
     typst compile {{fonts}} "out/script/번외편_IV_허니문_IV_대본/script_ja.typ" build/IV_script_ja.pdf
     @echo "단편소설·헌정곡은 각 폴더의 파일 머리 주석대로 컴파일한다(III 대본은 아직 없다)"
+
+# 프리퀄·스핀오프 .md → .typ (tools/script_md2typ.py 생성물) + 컴파일 확인
+docs-typ:
+    python3 tools/script_md2typ.py docs/kimishinu_prequel_ko_v0.16.md docs/kimishinu_prequel_ja_v0.16.md docs/kimishinu_spinoff_ko_v0.6.md docs/kimishinu_spinoff_ja_v0.6.md
+    @mkdir -p build
+    @for f in kimishinu_prequel_ko_v0.16 kimishinu_prequel_ja_v0.16 kimishinu_spinoff_ko_v0.6 kimishinu_spinoff_ja_v0.6; do \
+      typst compile {{fonts}} "docs/$f.typ" "build/$f.pdf" && printf '%s: %s pages\n' "$f" "$(pdfinfo "build/$f.pdf" | awk '/^Pages:/{print $2}')"; done
