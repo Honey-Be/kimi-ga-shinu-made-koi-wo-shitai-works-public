@@ -67,7 +67,7 @@ L = {
         title="동귀어진 → 폭로방송 → 〈비창〉 1악장",
         subtitle="두 시퀀스를 연이어 — 에이란이 금서와 마주한 자리부터 두 자매가 잠드는 순간까지",
         footer="두 시퀀스 연속 대본 · 비공개 내부 자료 · KO",
-        meta="원전 v2.2.2 · 음원 셋을 자르지 않고 통째로 · 그 사이의 무음 길이는 이 덱의 가안이다 · 생성물",
+        meta="원전 v2.7 · 음원 셋을 자르지 않고 통째로 · 그 사이의 무음 길이는 이 덱의 가안이다 · 생성물",
         cont="(이어서)", silent="무음", nominal="가안",
         seq12="동귀어진 → 폭로방송", seq11="〈비창〉 1악장",
     ),
@@ -77,7 +77,7 @@ L = {
         title="相討ち → 暴露放送 → 「悲愴」第1楽章",
         subtitle="二つのシークエンスを続けて ― エイランが禁書と向き合った場から二人の姉妹が眠りに落ちる瞬間まで",
         footer="二シークエンス連続台本 · 非公開の内部資料 · JA",
-        meta="原典 v2.2.2 · 音源三つを切らず丸ごと · その間の無音の長さはこのデッキの仮案である · 生成物",
+        meta="原典 v2.7 · 音源三つを切らず丸ごと · その間の無音の長さはこのデッキの仮案である · 生成物",
         cont="（続き）", silent="無音", nominal="仮案",
         seq12="相討ち → 暴露放送", seq11="「悲愴」第1楽章",
     ),
@@ -86,7 +86,7 @@ L = {
 # --- 12번 대본(.md) 파서 -------------------------------------------------
 
 H3 = re.compile(r"^### ([ABC])\s*[—―]\s*(.+?)\s*$")
-H4 = re.compile(r"^#### ([ABC]-\d+′?)\s*·\s*(?:\*\*(.+?)\*\*\s*·\s*)?(.+?)\s*$")
+H4 = re.compile(r"^#### ([ABC]-\d+[′″]?)\s*·\s*(?:\*\*(.+?)\*\*\s*·\s*)?(.+?)\s*$")
 BODY_START = re.compile(r"^## (?:대본|台本)\s*$")
 BODY_END = re.compile(r"^## (?:이 대본이 하지 않은 것|この台本がしなかったこと)\s*$")
 CUE_LINE = re.compile(r"^`(\[.*\])`\s*$")
@@ -331,6 +331,14 @@ def fmt(t: float) -> str:
     return f"{m}:{t - m * 60:04.1f}"
 
 
+def shrink(u: int) -> str:
+    """비트 하나가 한 장의 줄 예산을 넘으면 그 비트의 글자를 줄인다(비트는 나눌 수 없으므로).
+    글자를 s배로 줄이면 줄 수는 대략 s² 배가 된다 — 그래서 제곱근. 0.70em 아래로는 줄이지 않는다."""
+    if u <= MAX_UNITS:
+        return ""
+    return f"{max(0.70, math.sqrt(MAX_UNITS / u)):.2f}em"
+
+
 def render(lang: str, secs12: list[Sec], secs11, movements, units: dict[str, int], shas: dict[str, str]) -> str:
     C = L[lang]
     w = []
@@ -363,8 +371,8 @@ def render(lang: str, secs12: list[Sec], secs11, movements, units: dict[str, int
     a("#let head(seq, sec, cont) = block(below: 0.6em)[")
     a("  #text(size: 9pt, fill: dim)[#seq · #sec #if cont [· " + C["cont"] + "]] \\")
     a("]")
-    a("#let note(body) = text(size: 9pt, fill: dim)[#body]")
-    a("#let quietnote(body) = text(size: 9pt, fill: quiet)[#body]")
+    a("#let note(body) = text(size: 0.82em, fill: dim)[#body]")
+    a("#let quietnote(body) = text(size: 0.82em, fill: quiet)[#body]")
     a("")
     a("#title-slide[")
     a(f'  #text(size: 1.6em, weight: "bold")[{C["title"]}]')
@@ -397,9 +405,12 @@ def render(lang: str, secs12: list[Sec], secs11, movements, units: dict[str, int
                      f"t: {typ_str(fmt(b.t0))}, sub: false, "
                      f"label: {typ_str((b.label[:44]))}, text: {typ_str(b.plain())})")
                 a(f"  #beat(self, {j}, {m}, {typ_str(tag)}, [{md_to_typ(b.label + stamp)}])[")
+                fit = shrink(units[b.bid])
+                if fit:
+                    a(f"    #set text(size: {fit})")
                 for kind, t in b.blocks:
                     if kind == "cue":
-                        a(f"    #text(size: 9pt, fill: dim)[{md_to_typ(t)}]")
+                        a(f"    #text(size: 0.82em, fill: dim)[{md_to_typ(t)}]")
                     elif kind == "quote":
                         inner = "\n".join(re.sub(r"^\s*> ?", "", x) for x in t.split("\n"))
                         a("    #quote(block: true)[" + md_to_typ(inner) + "]")
@@ -426,6 +437,9 @@ def render(lang: str, secs12: list[Sec], secs11, movements, units: dict[str, int
                      f"label: {typ_str(b.label)}, text: {typ_str(P11.plain_text(b))})")
                 ts = b.ts + (f"–{b.ts_end}" if b.ts_end else "")
                 a(f"  #beat(self, {j}, {m}, {typ_str(ts)}, [])[")
+                fit = shrink(units[f"11:{b.index}"])
+                if fit:
+                    a(f"    #set text(size: {fit})")
                 a("    " + b.body.replace("\n", "\n    "))
                 for q in b.quotes:
                     a("    " + q.replace("\n", "\n    "))

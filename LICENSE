@@ -5,9 +5,10 @@ NEWSNIPER Ethical Public License v1 (NEPLv1) — 적용 고지 / Application Not
       이 저장소의 사본도 갱신한다.
       정본: https://github.com/newsniper-org/ethical-public-license
 
-저작물        두 시퀀스(동귀어진 → 폭로방송 · 「비창」 1악장)
-              — 대본 · 덱 · 연속 재생 데모 · 인물관계도
-              (비공개 작업 저장소의 공개용 스냅샷)
+저작물        『네가 죽을 때까지 사랑하고 싶어』 결말 구상 파생 콘텐츠 —
+              원전(통합·동반·프리퀄·스핀오프 공개판) · 해설영상 대본 01~12 ·
+              번외편/결말부 대본·단편소설판 · 헌정곡 · 덱 · 연속 재생 데모 ·
+              인물관계도 (비공개 작업 저장소의 공개용 스냅샷)
 라이선서      NEWSNIPER <newsniper@protonmail.com>
 통지처        newsniper@protonmail.com            (제8.2.1조의 통지가 도달할 곳)
 저작권        Copyright (c) 2026 NEWSNIPER
@@ -71,10 +72,16 @@ NEWSNIPER Ethical Public License v1 (NEPLv1) — 적용 고지 / Application Not
   ※ 위에 적지 않은 파일은 전부 저작 부분이다 (제1.3.1조) — 비상업 한정,
     동일조건. 구체적으로는 다음이 해당한다.
 
-      out/**                        대본(script_*), 큐(cues.json),
-                                    덱(_combined/slides_*, demo/slides_*),
-                                    악장표(_combined/movements.json), README.md
-      docs/_diagrams/**             인물관계도
+      docs/**                       원전(통합·동반 .typ, 프리퀄·스핀오프 공개판
+                                    .md)과 컴파일 의존 도표(_diagrams/**)
+      out/bgm/01~10/**              해설영상 대본(script_ko.md · storyboard.md)
+      out/bgm/11_… · 12_… · _combined/**
+                                    시퀀스 대본(script_{ko,ja}.{md,typ}),
+                                    큐(cues.json), 덱(slides_*),
+                                    악장표(movements.json), README.md
+      out/script/**                 번외편 넷과 결말부의 대본(script_{ko,ja}.typ),
+                                    단편소설판(단편소설_ko.typ),
+                                    헌정곡(헌정곡_2안_* · _gen_audio_ly.py)
       README.md
 
   인물관계도 .typ 는 코드와 서술이 한 파일에 있다. 그 파일을 그대로 또는

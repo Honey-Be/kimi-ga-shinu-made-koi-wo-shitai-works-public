@@ -1,5 +1,5 @@
-# 두 시퀀스 연속 데모 — touying 덱 + touying-exporter(fork) + Astro
-# 순서: setup → slides → build(또는 dev) → check → e2e
+# 『네가 죽을 때까지 사랑하고 싶어』 결말 구상 파생 콘텐츠 — 공개용 스냅샷
+# 원전 PDF: just compile · 데모: setup → slides → build(또는 dev) → check → e2e
 set shell := ["bash", "-euo", "pipefail", "-c"]
 
 fonts := "--font-path /usr/share/fonts/noto-cjk --font-path /usr/share/fonts/nanum"
@@ -34,7 +34,7 @@ demo-setup:
 demo-test:
     {{vpy}} -m pytest web/touying-exporter/tests -q
 
-# 두 시퀀스(12번 + 11번) → 한 덱 slides_{ko,ja}.typ + 악장표 movements.json. typst 로 쪽수(1 + 78 = 79) 확인
+# 두 시퀀스(12번 + 11번) → 한 덱 slides_{ko,ja}.typ + 악장표 movements.json. typst 로 쪽수(1 + 84 = 85) 확인
 demo-slides:
     python3 tools/sequence_demo_build.py gen
     mkdir -p build/demo
@@ -87,3 +87,25 @@ relations:
 
 clean:
     rm -rf build
+
+# 원전(Typst) KO/JA → PDF (build/ 아래에, git에는 넣지 않는다)
+compile:
+    mkdir -p build
+    typst compile {{fonts}} docs/kimishinu_merged_ko_v2.9.typ build/merged_ko.pdf
+    typst compile {{fonts}} docs/kimishinu_merged_ja_v2.9.typ build/merged_ja.pdf
+    typst compile {{fonts}} docs/reference/kimishinu_history_ko_v2.9.typ build/history_ko.pdf
+    typst compile {{fonts}} docs/reference/kimishinu_history_ja_v2.9.typ build/history_ja.pdf
+    @for f in merged_ko merged_ja history_ko history_ja; do printf '%s: %s pages\n' $f "$(pdfinfo build/$f.pdf | awk '/^Pages:/{print $2}')"; done
+
+# 대본·단편소설(.typ) — 각 파일 머리 주석에 컴파일 명령이 있다.
+# 결말부 단편소설은 음원 미첨부: typst compile --root . --input with-audio=false ...
+scripts-pdf:
+    mkdir -p build
+    typst compile {{fonts}} "out/script/결말부_연속시퀀스_단편소설/단편소설_ko.typ" --root . --input with-audio=false build/결말부_단편소설_ko.pdf
+    typst compile {{fonts}} "out/script/번외편_I_허니문_I_대본/script_ko.typ" build/I_script_ko.pdf
+    typst compile {{fonts}} "out/script/번외편_I_허니문_I_대본/script_ja.typ" build/I_script_ja.pdf
+    typst compile {{fonts}} "out/script/번외편_II_허니문_II_대본/script_ko.typ" build/II_script_ko.pdf
+    typst compile {{fonts}} "out/script/번외편_II_허니문_II_대본/script_ja.typ" build/II_script_ja.pdf
+    typst compile {{fonts}} "out/script/번외편_IV_허니문_IV_대본/script_ko.typ" build/IV_script_ko.pdf
+    typst compile {{fonts}} "out/script/번외편_IV_허니문_IV_대본/script_ja.typ" build/IV_script_ja.pdf
+    @echo "단편소설·헌정곡은 각 폴더의 파일 머리 주석대로 컴파일한다(III 대본은 아직 없다)"
