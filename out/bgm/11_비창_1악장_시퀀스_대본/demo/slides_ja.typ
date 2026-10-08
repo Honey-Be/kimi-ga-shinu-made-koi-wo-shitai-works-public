@@ -40,7 +40,7 @@
   #v(1em)
   #text(size: 0.75em, fill: dim)[原典 v2.7 · 台詞はすべて提案者確定（2026-09-18）· 馬車内の例外三つ（規則4・10・14） · カラヤン / ベルリン・フィルハーモニー 18:29.1 · このデッキは生成物である]
   // 덱의 출처 — check 가 manifest 의 이 값과 지금의 원본을 대조해 오래된 내보내기를 잡는다
-  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ja", source: "script_ja.typ", source_sha256: "5048b4ed81505cf73914682cae194a5bb94a900c24c23cd46e20d8a9dde3431a", beats: 52, touying: "0.7.4", generator: "tools/pathetique_demo_build.py")) <sync-meta>]
+  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ja", source: "script_ja.typ", source_sha256: "66d7f9cefd073da4bbe3eb54033dba5ca72ef8182d8d983ee68c48a688bee34c", beats: 52, touying: "0.7.4", generator: "tools/pathetique_demo_build.py")) <sync-meta>]
 ]
 
 #slide(repeat: 8, self => [

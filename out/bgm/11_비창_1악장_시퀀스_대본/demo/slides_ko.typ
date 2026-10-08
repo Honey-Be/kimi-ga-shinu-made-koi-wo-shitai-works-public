@@ -40,7 +40,7 @@
   #v(1em)
   #text(size: 0.75em, fill: dim)[원전 v2.7 · 대사 전부 제안자 확정(2026-09-18) · 마차 안 예외 셋(규칙 4·10·14) · 카라얀 / 베를린 필하모닉 18:29.1 · 이 덱은 생성물이다]
   // 덱의 출처 — check 가 manifest 의 이 값과 지금의 원본을 대조해 오래된 내보내기를 잡는다
-  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ko", source: "script_ko.typ", source_sha256: "64f153b419c49b1be261ee8507d35b66fa23f4f3abc015b571fba4c2d8b8aa69", beats: 52, touying: "0.7.4", generator: "tools/pathetique_demo_build.py")) <sync-meta>]
+  #context [#metadata((page: here().page(), kind: "sync-meta", lang: "ko", source: "script_ko.typ", source_sha256: "819b6f40c87bdbf59663eec55c3a4a969058bb61df9e826dd6cb5e840cddc9a5", beats: 52, touying: "0.7.4", generator: "tools/pathetique_demo_build.py")) <sync-meta>]
 ]
 
 #slide(repeat: 8, self => [

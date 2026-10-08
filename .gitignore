@@ -6,6 +6,7 @@
 
 build/
 *.pdf
+!docs/_diagrams/*.pdf
 
 web/**/node_modules/
 web/**/dist/
