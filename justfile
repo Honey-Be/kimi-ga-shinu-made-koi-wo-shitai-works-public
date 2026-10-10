@@ -91,10 +91,10 @@ clean:
 # 원전(Typst) KO/JA → PDF (build/ 아래에, git에는 넣지 않는다)
 compile:
     mkdir -p build
-    typst compile {{fonts}} docs/kimishinu_merged_ko_v2.9.typ build/merged_ko.pdf
-    typst compile {{fonts}} docs/kimishinu_merged_ja_v2.9.typ build/merged_ja.pdf
-    typst compile {{fonts}} docs/reference/kimishinu_history_ko_v2.9.typ build/history_ko.pdf
-    typst compile {{fonts}} docs/reference/kimishinu_history_ja_v2.9.typ build/history_ja.pdf
+    typst compile {{fonts}} docs/kimishinu_merged_ko_v2.11.2.typ build/merged_ko.pdf
+    typst compile {{fonts}} docs/kimishinu_merged_ja_v2.11.2.typ build/merged_ja.pdf
+    typst compile {{fonts}} docs/reference/kimishinu_history_ko_v2.11.2.typ build/history_ko.pdf
+    typst compile {{fonts}} docs/reference/kimishinu_history_ja_v2.11.2.typ build/history_ja.pdf
     @for f in merged_ko merged_ja history_ko history_ja; do printf '%s: %s pages\n' $f "$(pdfinfo build/$f.pdf | awk '/^Pages:/{print $2}')"; done
 
 # 대본·단편소설(.typ) — 각 파일 머리 주석에 컴파일 명령이 있다.

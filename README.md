@@ -9,10 +9,10 @@
 
 ```
 docs/
-    kimishinu_merged_{ko,ja}_v2.9.typ      통합 원전 — 비평 · 결말 구성안 · 준외전 스페셜
+    kimishinu_merged_{ko,ja}_v2.11.2.typ      통합 원전 — 비평 · 결말 구성안 · 준외전 스페셜
                                             전 22화와 종장 · 번외편 넷 · 백 년 뒤의
                                             미래편 · 음악 설계 · 미해결 (Typst, KO/JA 록스텝)
-    reference/kimishinu_history_{ko,ja}_v2.9.typ
+    reference/kimishinu_history_{ko,ja}_v2.11.2.typ
                                             동반 문서 「역사, 픽션, 그리고 갚아야 할 것」
     kimishinu_prequel_{ko,ja}_v0.16.{md,typ}
                                             프리퀄 구상(부모 세대) — .typ 는 변환기 생성물
@@ -54,7 +54,7 @@ CJK 폰트가 필요하다 — justfile 의 `fonts` 변수가 가리키는 `/usr
 
 ## 이 저장소에 없는 것 (편집 이력)
 
-- **동결 판본들** — 원전의 앞 판본 전부(v1.48~v2.8.8). 여기엔 현행(v2.9 등)만 있다.
+- **동결 판본들** — 원전의 앞 판본 전부(v1.48~v2.11.1). 여기엔 현행(v2.11.2 등)만 있다.
 - `proposals/`(제안·결정 기록) · `briefs/`(작업 규칙) · `index/` · 대본의 `check.md`·`JUDGMENT.md`(정합성 검사·판정 기록) · CLAUDE.md·HANDOVER.md · 해시 매니페스트
 - **스핀오프 성교육편** — 자문(전문가) 응답 대기 중이라 공개판에서 뺐다.
 - 음원 · 영상 렌더 · 프레임 시퀀스 · 일러스트 작업물 · 결말부 단편소설의 음원 첨부 PDF
