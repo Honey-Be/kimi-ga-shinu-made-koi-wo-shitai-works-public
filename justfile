@@ -98,7 +98,7 @@ compile:
     @for f in merged_ko merged_ja history_ko history_ja; do printf '%s: %s pages\n' $f "$(pdfinfo build/$f.pdf | awk '/^Pages:/{print $2}')"; done
 
 # 대본·단편소설(.typ) — 각 파일 머리 주석에 컴파일 명령이 있다.
-# 결말부 단편소설은 음원 미첨부: typst compile --root . --input with-audio=false ...
+# 결말부 합본(밤이 새도록 + 아침이 온 뒤)은 음원 미첨부가 기본이다(--input with-audio=true 는 각자의 음원이 있을 때)
 scripts-pdf:
     mkdir -p build
     typst compile {{fonts}} "out/script/결말부_합본/합본_ko.typ" --root . build/결말부_합본_ko.pdf
