@@ -101,7 +101,7 @@ compile:
 # 결말부 단편소설은 음원 미첨부: typst compile --root . --input with-audio=false ...
 scripts-pdf:
     mkdir -p build
-    typst compile {{fonts}} "out/script/결말부_연속시퀀스_단편소설/단편소설_ko.typ" --root . --input with-audio=false build/결말부_단편소설_ko.pdf
+    typst compile {{fonts}} "out/script/결말부_합본/합본_ko.typ" --root . build/결말부_합본_ko.pdf
     typst compile {{fonts}} "out/script/번외편_I_허니문_I_대본/script_ko.typ" build/I_script_ko.pdf
     typst compile {{fonts}} "out/script/번외편_I_허니문_I_대본/script_ja.typ" build/I_script_ja.pdf
     typst compile {{fonts}} "out/script/번외편_II_허니문_II_대본/script_ko.typ" build/II_script_ko.pdf
