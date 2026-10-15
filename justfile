@@ -102,6 +102,7 @@ compile:
 scripts-pdf:
     mkdir -p build
     typst compile {{fonts}} "out/script/결말부_합본/합본_ko.typ" --root . build/결말부_합본_ko.pdf
+    typst compile {{fonts}} "out/script/스페셜편_소설/스페셜편_소설_ko.typ" --root . build/스페셜편_소설_ko.pdf
     typst compile {{fonts}} "out/script/번외편_I_허니문_I_대본/script_ko.typ" build/I_script_ko.pdf
     typst compile {{fonts}} "out/script/번외편_I_허니문_I_대본/script_ja.typ" build/I_script_ja.pdf
     typst compile {{fonts}} "out/script/번외편_II_허니문_II_대본/script_ko.typ" build/II_script_ko.pdf
