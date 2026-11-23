@@ -115,9 +115,8 @@ scripts-pdf:
     typst compile {{fonts}} "out/bgm/12_동귀어진_폭로방송_시퀀스_대본/script_ja.typ" build/12_script_ja.pdf
     @echo "단편소설·헌정곡은 각 폴더의 파일 머리 주석대로 컴파일한다(III 대본은 아직 없다)"
 
-# 스핀오프 .md → .typ (tools/script_md2typ.py 생성물) + 프리퀄(v0.18부터 Typst 원본)과 함께 컴파일 확인
+# 프리퀄(v0.18부터) · 스핀오프(v0.7부터)는 Typst 원본이다 — 컴파일 확인
 docs-typ:
-    python3 tools/script_md2typ.py docs/kimishinu_spinoff_ko_v0.6.1.md docs/kimishinu_spinoff_ja_v0.6.1.md
     @mkdir -p build
-    @for f in kimishinu_prequel_ko_v0.24 kimishinu_prequel_ja_v0.24 kimishinu_spinoff_ko_v0.6.1 kimishinu_spinoff_ja_v0.6.1; do \
+    @for f in kimishinu_prequel_ko_v0.24 kimishinu_prequel_ja_v0.24 kimishinu_spinoff_ko_v0.7.4 kimishinu_spinoff_ja_v0.7.4; do \
       typst compile {{fonts}} "docs/$f.typ" "build/$f.pdf" && printf '%s: %s pages\n' "$f" "$(pdfinfo "build/$f.pdf" | awk '/^Pages:/{print $2}')"; done
