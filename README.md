@@ -9,12 +9,12 @@
 
 ```
 docs/
-    kimishinu_merged_{ko,ja}_v3.5.typ       통합 원전 — 비평 · 결말 구성안 · 준외전 스페셜
+    kimishinu_merged_{ko,ja}_v3.6.typ       통합 원전 — 비평 · 결말 구성안 · 준외전 스페셜
                                             전 28화와 종장 · 번외편(I~XIII · XV · XVI) · 백 년 뒤의
                                             미래편 · 음악 설계 · 미해결 (Typst, KO/JA 록스텝)
                                             — 이 공개판은 실존 인물의 이름 · 신상을 담은
                                             설정집 주석 일곱 자리의 그 구절만 걷었다(아래)
-    reference/kimishinu_history_{ko,ja}_v3.5.typ
+    reference/kimishinu_history_{ko,ja}_v3.6.typ
                                             동반 문서 「역사, 픽션, 그리고 갚아야 할 것」
     kimishinu_prequel_{ko,ja}_v0.24.typ     프리퀄 구상(부모 세대) — v0.18부터 Typst 원본
     kimishinu_spinoff_{ko,ja}_v0.7.4.typ    스핀오프 구상 — 이 공개판은 성교육편(병, 4절)만
@@ -31,7 +31,7 @@ out/script/결말부_합본/                      본편 결말부 산문판 합
                                              제4부 저울 · 제5부 새로운 시대의 시작 — 61장)
 out/script/스페셜편_소설/                      스페셜편 소설판 「네가 죽을 때까지」 — 전 28화와 종장 · 소수점 편 ·
                                             요리편 · 성교육편(스핀오프로 확장한 부분은 제외, 성교육편의 답은
-                                            자문 뒤) — 54장 · 원전 v3.5 기준(새 편 일부는 가안)
+                                            자문 뒤) — 57장 · 원전 v3.6 기준(새 편 일부는 가안)
 out/script/번외편_I~IV_허니문_*/             번외편 넷의 대본(KO/JA)과 단편소설판,
                                             III의 헌정곡 「해송」(Typst·LilyPond 악보)
 out/script/헌정곡_세고개/                    키이란의 헌정곡 「세 고개」 악보 — LilyPond 소스(.ly) · MusicXML(.xml).
@@ -47,7 +47,7 @@ web/touying-exporter/                       touying-exporter fork(submodule, MIT
 ## 읽는 법 · 컴파일
 
 ```sh
-just compile     # 원전 4종(통합·동반 KO/JA) → build/*.pdf — merged_ko 481쪽
+just compile     # 원전 4종(통합·동반 KO/JA) → build/*.pdf — merged_ko 493쪽
 just docs-typ    # 스핀오프 .md → .typ 재생성(script_md2typ) + 프리퀄과 함께 컴파일
 just scripts-pdf # 대본 11종(결말부 · 번외편 I·II·IV · 시퀀스 11·12번) → build/*.pdf
 just demo-setup audio_dv=… audio_br=… audio_tc=…   # 데모 — 음원은 각자 사본
@@ -62,7 +62,7 @@ CJK 폰트가 필요하다 — justfile 의 `fonts` 변수가 가리키는 `/usr
 
 ## 이 저장소에 없는 것 (편집 이력)
 
-- **동결 판본들** — 원전의 앞 판본 전부(v1.48~v3.4.1). 여기엔 현행(통합 · 동반 v3.5 · 프리퀄 v0.24 등)만 있다.
+- **동결 판본들** — 원전의 앞 판본 전부(v1.48~v3.5). 여기엔 현행(통합 · 동반 v3.6 · 프리퀄 v0.24 등)만 있다.
 - **실존 인물의 이름과 신상** — 원전이 「설정집 주석에만 적고 공개 스냅샷에는 적지 않는다」고 정한 모티브 주석(통합 KO/JA 각 일곱 줄)은 공개판에서 그 구절만 걷었다. 줄 수와 구조 수는 비공개 원전과 같다.
 - `proposals/`(제안·결정 기록) · `briefs/`(작업 규칙) · `index/` · 대본의 `check.md`·`JUDGMENT.md`(정합성 검사·판정 기록) · CLAUDE.md·HANDOVER.md · 해시 매니페스트
 - **스핀오프 성교육편** — 자문(전문가) 응답 대기 중이라 공개판에서 뺐다.
