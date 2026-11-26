@@ -44,7 +44,7 @@
   #v(0.4em)
   #text(size: 11pt, style: "italic")[본편 결말부 산문판 — 다섯 부 · 예순한 장]
   #v(0.2em)
-  #text(size: 10pt, style: "italic")[원전 v3.5 기준 · 가안]
+  #text(size: 10pt, style: "italic")[원전 v3.6 기준 · 가안]
 ]
 
 #v(1.5em)
