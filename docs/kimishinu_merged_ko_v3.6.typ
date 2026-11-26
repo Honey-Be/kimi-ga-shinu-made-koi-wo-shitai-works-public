@@ -8,7 +8,7 @@
 
 #pagebreak()
 
-#include "_diagrams/kimishinu_relations_ko_v3.5.typ"
+#include "_diagrams/kimishinu_relations_ko_v3.6.typ"
 
 #pagebreak()
 
