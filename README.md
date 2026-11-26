@@ -34,6 +34,8 @@ out/script/스페셜편_소설/                      스페셜편 소설판 「�
                                             자문 뒤) — 57장 · 원전 v3.6 기준(새 편 일부는 가안)
 out/script/번외편_I~IV_허니문_*/             번외편 넷의 대본(KO/JA)과 단편소설판,
                                             III의 헌정곡 「해송」(Typst·LilyPond 악보)
+out/script/번외편_V~XVI_*/                   번외편 V~XVI의 단편소설판 — X~XIII은 정본(`*_소설_정본/`), 나머지는
+                                            가안(`*_가안/` — XIV는 원전에 아직 오르지 않은 가안), IX는 대본(KO/JA)도
 out/script/헌정곡_세고개/                    키이란의 헌정곡 「세 고개」 악보 — LilyPond 소스(.ly) · MusicXML(.xml).
                                             음원은 넣지 않는다
 
